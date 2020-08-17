@@ -1,0 +1,7 @@
+
+accumulate:
+  coding:
+    tool:
+      log:
+        path: ../log
+        level: INFO
