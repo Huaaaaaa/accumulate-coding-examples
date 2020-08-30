@@ -1,14 +1,10 @@
 package com.accumulate.coding.tool.mapstruct;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-
 import java.io.Serializable;
 
 /**
  * @ClassName BasicDesVo
  * @Description TODO
- * @Author huayingcao2
  * @Date 2020/8/17  16:45
  */
 public class BasicDesVo implements Serializable {

@@ -1,15 +1,10 @@
 package com.accumulate.coding.tool.mapstruct;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import java.io.Serializable;
 
 /**
  * @ClassName BasicSource
  * @Description TODO
- * @Author huayingcao2
  * @Date 2020/8/17  16:43
  */
 
