@@ -9,6 +9,11 @@ spring:
     minIdle: 1
     maxActive: 25
     maxWait: 60000
+  cloud:
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8080
   jpa:
     database-platform: org.hibernate.dialect.MySQL8Dialect
     show-sql: true

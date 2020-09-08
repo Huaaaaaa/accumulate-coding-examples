@@ -2,11 +2,15 @@ package com.accumulate.coding.tool.dao;
 
 import com.accumulate.coding.tool.enums.ProductTypeEnum;
 import com.accumulate.coding.tool.enums.TimeUnitEnum;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 
-import javax.persistence.*;
-import java.sql.Timestamp;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 
 /**
  * @ClassName OrderItem
@@ -14,12 +18,9 @@ import java.sql.Timestamp;
  * @Date 2020/8/18  11:37
  */
 @Entity
-@Table(name = "order_item")
+@TableName(value = "t_account_idp_principal", autoResultMap = true)
 @Data
-public class OrderItem {
-
-    @Id
-    private Long id;
+public class OrderDetails {
 
     @Column(name = "order_number")
     private String orderNumber;
@@ -29,8 +30,9 @@ public class OrderItem {
     @Enumerated(EnumType.ORDINAL)
     private ProductTypeEnum productType;
 
-    @Column(name = "product_detail")
-    private String productDetail;
+    @Column(name = "product_info")
+    @TableField(typeHandler = JacksonTypeHandler.class)
+    private String productInfo;
 
 
     @Column(name = "time_unit")
@@ -41,6 +43,6 @@ public class OrderItem {
     private Integer timeSpan;
 
     @Column(name = "pay_time")
-    private Timestamp payTime;
+    private long payTime;
 
 }

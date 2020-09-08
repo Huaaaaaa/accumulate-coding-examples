@@ -7,10 +7,10 @@
         <artifactId>accumulate-coding-examples</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>com.accumnulate.coding</groupId>
-    <artifactId>tool</artifactId>
+    <groupId>com.hyc.endeavor</groupId>
+    <artifactId>accumulate-coding-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>accumulate-coding-tool</name>
+    <name>accumulate-coding-common</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -25,28 +25,6 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>com.jdcloud.IDaaS.inner</groupId>
-            <artifactId>jdcloud-IDaaS-inner-config</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.jdcloud.IDaaS.inner</groupId>
-                    <artifactId>jdcloud-IDaaS-inner-token</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
             <exclusions>
@@ -56,22 +34,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-annotation</artifactId>
-            <version>3.2.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-extension</artifactId>
-            <version>3.2.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.hyc.endeavor</groupId>
-            <artifactId>accumulate-coding-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
     </dependencies>
 
     <build>
@@ -80,7 +42,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-
         </plugins>
     </build>
 

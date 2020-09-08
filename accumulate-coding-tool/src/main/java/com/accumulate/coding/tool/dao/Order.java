@@ -7,7 +7,6 @@ import org.springframework.data.annotation.Id;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.sql.Timestamp;
 
 /**
  * @ClassName Order
@@ -30,7 +29,7 @@ public class Order {
     @Column(name = "user_name")
     private String userName;
 
-    @Column(name = "type")
+    @Column(name = "order_type")
     @Enumerated(EnumType.ORDINAL)
     private OrderTypeEnum orderType;
 
@@ -38,10 +37,10 @@ public class Order {
     private BigDecimal price;
 
     @Column(name = "create_time")
-    private Timestamp createTime;
+    private Long createTime;
 
     @Column(name = "update_time")
-    private Timestamp updateTime;
+    private Long updateTime;
 
     @Column(name = "order_status")
     @Enumerated(EnumType.ORDINAL)

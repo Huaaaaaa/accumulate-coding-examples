@@ -37,4 +37,17 @@ public enum OrderTypeEnum {
 
     public void setMsg(String msg) {
         this.msg = msg;
-    }}
+    }
+
+    public static OrderTypeEnum getWithType(int type) {
+        OrderTypeEnum[] orderTypeEnums = OrderTypeEnum.values();
+        OrderTypeEnum orderTypeEnum = null;
+        for (OrderTypeEnum orderType : orderTypeEnums) {
+            if (orderType.type == type) {
+                orderTypeEnum = orderType;
+            }
+        }
+        return orderTypeEnum;
+    }
+
+}

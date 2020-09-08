@@ -22,7 +22,7 @@ public class OrderEntity {
 
     private String productType;
 
-    private String productDetail;
+    private String productInfo;
 
     private String orderStatus;
 
