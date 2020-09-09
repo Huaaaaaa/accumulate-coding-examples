@@ -1,7 +1,10 @@
 package com.accumulate.coding.tool.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
@@ -10,7 +13,11 @@ import java.math.BigDecimal;
  * @Date 2020/8/18  12:14
  */
 @Data
-public class OrderEntity {
+@AllArgsConstructor
+@NoArgsConstructor
+public class OrderEntity implements Serializable {
+
+    private static final long serialVersionUID = 5322426369045334401L;
 
     private String orderNumber;
 

@@ -1,10 +1,10 @@
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://localhost:3306/accumulate_coding?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&allowMultiQueries=true
+    url: jdbc:postgresql://127.0.0.1:5432/accumulate-coding?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&stringtype=unspecified
     username: root
     password: hyc123
-    driverClassName: com.mysql.cj.jdbc.Driver
+    driverClassName: org.postgresql.Driver
     initialSize: 5
     minIdle: 1
     maxActive: 25
@@ -14,8 +14,12 @@ spring:
       transport:
         port: 8719
         dashboard: localhost:8080
+mybatis-plus:
+  global-config:
+    db-config:
+      db-type: postgresql
   jpa:
-    database-platform: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
     show-sql: true
     hibernate.ddl-auto: create
     open-in-view: false

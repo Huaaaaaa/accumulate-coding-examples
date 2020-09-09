@@ -17,6 +17,8 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class BaseApiResponse<T> implements Serializable {
 
+    private static final long serialVersionUID = 5606458175381737652L;
+
     private String requestId;
 
     private T data;

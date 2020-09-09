@@ -23,7 +23,5 @@ public interface OrderService {
 
     BaseResponse<OrderEntity> getOrderDetails(String orderNumber);
 
-    BaseResponse<List<OrderEntity>> getOrderList(String userName);
-
 
 }

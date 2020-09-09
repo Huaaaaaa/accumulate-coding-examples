@@ -5,12 +5,15 @@ import com.accumulate.coding.tool.enums.TimeUnitEnum;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import java.io.Serializable;
 
 /**
  * @ClassName OrderItem
@@ -20,7 +23,11 @@ import javax.persistence.Enumerated;
 @Entity
 @TableName(value = "t_account_idp_principal", autoResultMap = true)
 @Data
-public class OrderDetails {
+@NoArgsConstructor
+@AllArgsConstructor
+public class OrderDetails implements Serializable {
+
+    private static final long serialVersionUID = -1362984189247003747L;
 
     @Column(name = "order_number")
     private String orderNumber;

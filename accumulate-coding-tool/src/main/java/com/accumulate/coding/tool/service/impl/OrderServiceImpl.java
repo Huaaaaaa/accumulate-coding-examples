@@ -4,11 +4,12 @@ import com.accumulate.coding.common.resp.BaseResponse;
 import com.accumulate.coding.tool.dao.Order;
 import com.accumulate.coding.tool.entity.OrderEntity;
 import com.accumulate.coding.tool.mapper.OrderMapper;
-import com.accumulate.coding.tool.mapstruct.mapper.OrderEntityMapper;
+import com.accumulate.coding.tool.mapstruct.mapper.OrderDataMapper;
 import com.accumulate.coding.tool.service.OrderService;
 import com.accumulate.coding.tool.wrapper.OrderWrapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -26,6 +27,9 @@ public class OrderServiceImpl extends BaseService implements OrderService {
     @Autowired
     private OrderMapper orderMapper;
 
+    private ParameterizedTypeReference<BaseResponse<List<Order>>> orderListTypeReference = new ParameterizedTypeReference<BaseResponse<List<Order>>>() {
+    };
+
     /**
      * create order
      *
@@ -35,7 +39,7 @@ public class OrderServiceImpl extends BaseService implements OrderService {
     @Override
     public BaseResponse<Boolean> createOrder(OrderEntity orderEntity) {
         validateParam(orderEntity, "orderEntity");
-        int res = orderMapper.insert(OrderEntityMapper.INSTANCE.entityToOrder(orderEntity));
+        int res = orderMapper.insert(OrderDataMapper.INSTANCE.entityToOrder(orderEntity));
         return new BaseResponse<>(res > 0);
     }
 
@@ -89,17 +93,11 @@ public class OrderServiceImpl extends BaseService implements OrderService {
      */
     @Override
     public BaseResponse<OrderEntity> getOrderDetails(String orderNumber) {
-        return null;
+        validateParam(orderNumber, "orderNumber");
+        Order order = orderMapper.selectOne(OrderWrapper.getOrderNumberWrapper(orderNumber));
+        OrderEntity orderEntity = OrderDataMapper.INSTANCE.orderToEntity(order);
+        return new BaseResponse<>(orderEntity);
+
     }
 
-
-    /**
-     * get order list with more information with userName
-     *
-     * @return
-     */
-    @Override
-    public BaseResponse<List<OrderEntity>> getOrderList(String userName) {
-        return null;
-    }
 }

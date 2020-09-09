@@ -24,4 +24,18 @@ public enum ProductTypeEnum {
         this.productCode = productCode;
         this.productName = productName;
         this.serviceCode = serviceCode;
-    }}
+    }
+
+    public static ProductTypeEnum getWithProductType(int type) {
+        ProductTypeEnum[] productTypeEnums = ProductTypeEnum.values();
+        ProductTypeEnum productTypeEnum = null;
+        for (ProductTypeEnum productType : productTypeEnums) {
+            if (productType.productCode == type) {
+                productTypeEnum = productType;
+            }
+        }
+        return productTypeEnum;
+    }
+
+
+}

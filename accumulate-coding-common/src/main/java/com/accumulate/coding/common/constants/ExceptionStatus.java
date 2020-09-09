@@ -7,5 +7,5 @@ package com.accumulate.coding.common.constants;
  */
 public class ExceptionStatus {
 
-    public static final String INTERNAL_ERROR = "Internal error";
+    public static final String INTERNAL_ERROR = "Internal Error";
 }

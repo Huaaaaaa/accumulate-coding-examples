@@ -2,10 +2,13 @@ package com.accumulate.coding.tool.dao;
 
 import com.accumulate.coding.tool.enums.OrderStatusEnum;
 import com.accumulate.coding.tool.enums.OrderTypeEnum;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
@@ -16,8 +19,11 @@ import java.math.BigDecimal;
 @Entity
 @Table(name = "order")
 @Data
-public class Order {
+@NoArgsConstructor
+@AllArgsConstructor
+public class Order implements Serializable {
 
+    private static final long serialVersionUID = 3593025191137705201L;
     @Id
     @Column(name = "id")
     private Long id;

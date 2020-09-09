@@ -2,6 +2,7 @@ package com.accumulate.coding.common.utils;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
@@ -47,4 +48,15 @@ public class JsonUtil {
             throw new RuntimeException(e.getMessage());
         }
     }
+
+
+    //这里我们直接传递一个Type类型
+    public static <T> T fromJson(String str, TypeReference type) {
+        try {
+            return (T) MAPPER.readValue(str, type);
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
+    }
+
 }

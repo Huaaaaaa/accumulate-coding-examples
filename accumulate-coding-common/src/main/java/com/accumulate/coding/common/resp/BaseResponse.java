@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Base64;
+import java.io.Serializable;
 
 /**
  * @ClassName BaseResponse
@@ -15,7 +15,9 @@ import java.util.Base64;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class BaseResponse<T> {
+public class BaseResponse<T> implements Serializable {
+
+    private static final long serialVersionUID = -2781971134228611778L;
 
     private T data;
 

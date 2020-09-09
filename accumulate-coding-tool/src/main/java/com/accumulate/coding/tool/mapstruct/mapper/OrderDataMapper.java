@@ -9,14 +9,15 @@ import org.mapstruct.Mappings;
 import org.mapstruct.factory.Mappers;
 
 /**
- * @ClassName OrderInfoMapper
+ * @ClassName OrderDataMapper
  * @Description
- * @Date 2020/8/18  13:19
+ * @Author huayingcao2
+ * @Date 2020/9/9  17:54
  */
 @Mapper(componentModel = "spring")
-public interface OrderEntityMapper {
+public interface OrderDataMapper {
 
-    OrderEntityMapper INSTANCE = Mappers.getMapper(OrderEntityMapper.class);
+    OrderDataMapper INSTANCE = Mappers.getMapper(OrderDataMapper.class);
 
 
     /**
@@ -27,9 +28,18 @@ public interface OrderEntityMapper {
      */
     @Mappings({
             @Mapping(target = "price", source = "orderEntity.orderPrice"),
-            @Mapping(target = "orderType", expression = "java(com.accumulate.coding.tool.enums.getWithType(entity.orderType))")
+            @Mapping(target = "orderType", expression = "java(com.accumulate.coding.tool.enums.OrderTypeEnum.getWithType(java.lang.Integer.parseInt(orderEntity.getOrderType())))")
     })
     Order entityToOrder(OrderEntity orderEntity);
+
+
+    /**
+     * from Order to OrderEntity
+     *
+     * @param order
+     * @return
+     */
+    OrderEntity orderToEntity(Order order);
 
 
     /**
@@ -39,7 +49,7 @@ public interface OrderEntityMapper {
      * @return
      */
     @Mappings({
-            @Mapping(target = "productType",expression = "java(com.accumulate.coding.tool.enums.getWithType(entity.orderType))", source = "orderEntity.productType"),
+            @Mapping(target = "productType", expression = "java(com.accumulate.coding.tool.enums.ProductTypeEnum.getWithProductType(java.lang.Integer.parseInt(orderEntity.getProductType())))"),
     })
     OrderDetails entityToDetails(OrderEntity orderEntity);
 

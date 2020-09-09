@@ -1,6 +1,5 @@
 package com.accumulate.coding.tool.controller;
 
-import com.accumulate.coding.common.controller.BaseController;
 import com.accumulate.coding.common.resp.BaseApiResponse;
 import com.accumulate.coding.common.resp.BaseResponse;
 import com.accumulate.coding.tool.dao.Order;
@@ -69,6 +68,18 @@ public class OrderController extends BaseController {
     @DeleteMapping("/delete/orderNumber")
     public BaseApiResponse<Boolean> deleteOrder(@PathVariable String orderNumber) {
         BaseResponse<Boolean> response = orderService.deleteOrder(orderNumber);
+        return baseApiResponse(response, "");
+    }
+
+    /**
+     * get orderEntity
+     *
+     * @param orderNumber
+     * @return
+     */
+    @GetMapping("/delete/orderNumber")
+    public BaseApiResponse<OrderEntity> getOrderEntity(@PathVariable String orderNumber) {
+        BaseResponse<OrderEntity> response = orderService.getOrderDetails(orderNumber);
         return baseApiResponse(response, "");
     }
 

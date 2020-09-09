@@ -1,4 +1,4 @@
-package com.accumulate.coding.common.controller;
+package com.accumulate.coding.tool.controller;
 
 import com.accumulate.coding.common.enums.ResultCode;
 import com.accumulate.coding.common.error.BaseError;
