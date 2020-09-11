@@ -2,10 +2,13 @@ package com.accumulate.coding.tool.dao;
 
 import com.accumulate.coding.tool.enums.OrderStatusEnum;
 import com.accumulate.coding.tool.enums.OrderTypeEnum;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -16,16 +19,16 @@ import java.math.BigDecimal;
  * @Description 订单表
  * @Date 2020/8/18  11:37
  */
-@Entity
-@Table(name = "order")
+@Builder
+@TableName(value = "order", autoResultMap = true)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Order implements Serializable {
 
     private static final long serialVersionUID = 3593025191137705201L;
-    @Id
-    @Column(name = "id")
+
+    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
 

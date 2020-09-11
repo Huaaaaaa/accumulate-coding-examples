@@ -2,15 +2,17 @@ package com.accumulate.coding.tool.dao;
 
 import com.accumulate.coding.tool.enums.ProductTypeEnum;
 import com.accumulate.coding.tool.enums.TimeUnitEnum;
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import java.io.Serializable;
@@ -20,14 +22,17 @@ import java.io.Serializable;
  * @Description 订单详情
  * @Date 2020/8/18  11:37
  */
-@Entity
-@TableName(value = "t_account_idp_principal", autoResultMap = true)
+@Builder
+@TableName(value = "order_details", autoResultMap = true)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class OrderDetails implements Serializable {
 
     private static final long serialVersionUID = -1362984189247003747L;
+
+//    @TableId(value = "id", type = IdType.AUTO)
+//    private Long id;
 
     @Column(name = "order_number")
     private String orderNumber;

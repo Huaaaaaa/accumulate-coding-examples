@@ -1,8 +1,8 @@
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://127.0.0.1:5432/accumulate-coding?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&stringtype=unspecified
-    username: root
+    url: jdbc:postgresql://127.0.0.1:5432/accumulate_coding?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&stringtype=unspecified
+    username: postgres
     password: hyc123
     driverClassName: org.postgresql.Driver
     initialSize: 5
@@ -14,10 +14,17 @@ spring:
       transport:
         port: 8719
         dashboard: localhost:8080
+  security:
+    basic:
+      enabled: true
+      path: /swagger-ui.html
+    user:
+      name: shuidi
+      password: 3body
 mybatis-plus:
-  global-config:
-    db-config:
-      db-type: postgresql
+  typeEnumsPackage: com.accumulate.coding.tool.enums
+  configuration:
+    cache-enabled: false
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQL9Dialect
     show-sql: true
@@ -53,3 +60,15 @@ accumulate:
 server:
   servlet:
     context-path: /
+  port: 8090
+swagger:
+  base-path: /**
+  base-package: 'com.accumulate'
+  title: 'spring-boot-swagger-tool'
+  description: '基于Swagger构建的SpringBoot RESTApi 文档'
+  version: '1.0'
+  serviceUrl: 'http://shuidi.tool.com'
+  contact:
+    name: '水滴'
+    url: 'http://shuidi.com'
+    email: 'shuidi.com'

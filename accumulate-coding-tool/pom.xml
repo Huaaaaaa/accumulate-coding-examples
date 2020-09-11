@@ -4,15 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.hyc.endeavor</groupId>
-        <artifactId>accumulate-coding-examples</artifactId>
+        <artifactId>accumulate-coding</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>com.accumnulate.coding</groupId>
-    <artifactId>tool</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>accumulate-coding-tool</name>
-    <description>Demo project for Spring Boot</description>
-
+    <artifactId>accumulate-coding-tool</artifactId>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -21,6 +16,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>
@@ -35,17 +35,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.jdcloud.IDaaS.inner</groupId>
-            <artifactId>jdcloud-IDaaS-inner-config</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.jdcloud.IDaaS.inner</groupId>
-                    <artifactId>jdcloud-IDaaS-inner-token</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
@@ -56,15 +45,11 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-annotation</artifactId>
-            <version>3.2.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-extension</artifactId>
-            <version>3.2.0</version>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.16</version>
         </dependency>
 
         <dependency>
@@ -75,12 +60,30 @@
     </dependencies>
 
     <build>
+        <finalName>core</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <!-- 本地ide启动时候注释掉对应的excludes，然后增加对应profile参数即可-->
+                <!--                <excludes>-->
+                <!--                    <exclude>*.yaml</exclude>-->
+                <!--                </excludes>-->
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
-
         </plugins>
     </build>
 

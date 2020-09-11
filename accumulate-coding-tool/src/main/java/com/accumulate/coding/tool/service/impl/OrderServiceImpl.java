@@ -3,12 +3,8 @@ package com.accumulate.coding.tool.service.impl;
 import com.accumulate.coding.common.resp.BaseResponse;
 import com.accumulate.coding.tool.dao.Order;
 import com.accumulate.coding.tool.entity.OrderEntity;
-import com.accumulate.coding.tool.mapper.OrderMapper;
-import com.accumulate.coding.tool.mapstruct.mapper.OrderDataMapper;
 import com.accumulate.coding.tool.service.OrderService;
-import com.accumulate.coding.tool.wrapper.OrderWrapper;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
 
@@ -23,11 +19,8 @@ import java.util.List;
 @Slf4j
 public class OrderServiceImpl extends BaseService implements OrderService {
 
-
-    @Autowired
-    private OrderMapper orderMapper;
-
-    private ParameterizedTypeReference<BaseResponse<List<Order>>> orderListTypeReference = new ParameterizedTypeReference<BaseResponse<List<Order>>>() {
+    private ParameterizedTypeReference<BaseResponse<List<Order>>> orderListTypeReference =
+            new ParameterizedTypeReference<BaseResponse<List<Order>>>() {
     };
 
     /**
@@ -39,8 +32,8 @@ public class OrderServiceImpl extends BaseService implements OrderService {
     @Override
     public BaseResponse<Boolean> createOrder(OrderEntity orderEntity) {
         validateParam(orderEntity, "orderEntity");
-        int res = orderMapper.insert(OrderDataMapper.INSTANCE.entityToOrder(orderEntity));
-        return new BaseResponse<>(res > 0);
+//        int res = orderMapper.insert(OrderDataMapper.INSTANCE.entityToOrder(orderEntity));
+        return new BaseResponse<>(false);
     }
 
     /**
@@ -52,8 +45,8 @@ public class OrderServiceImpl extends BaseService implements OrderService {
     @Override
     public BaseResponse<Boolean> deleteOrder(String orderNumber) {
         validateParam(orderNumber, "orderNumber");
-        int res = orderMapper.delete(OrderWrapper.getOrderNumberWrapper(orderNumber));
-        return new BaseResponse<>(res > 0);
+//        int res = orderMapper.delete(OrderWrapper.getOrderNumberWrapper(orderNumber));
+        return new BaseResponse<>(1 > 0);
     }
 
     /**
@@ -66,8 +59,8 @@ public class OrderServiceImpl extends BaseService implements OrderService {
     public BaseResponse<Boolean> updateOrder(Order order) {
         validateParam(order, "order");
         validateParam(order.getOrderNumber(), "orderNumber");
-        int res = orderMapper.update(order, OrderWrapper.getOrderNumberWrapper(order.getOrderNumber()));
-        return new BaseResponse<>(res > 0);
+//        int res = orderMapper.update(order, OrderWrapper.getOrderNumberWrapper(order.getOrderNumber()));
+        return new BaseResponse<>(1 > 0);
     }
 
 
@@ -79,9 +72,9 @@ public class OrderServiceImpl extends BaseService implements OrderService {
      */
     @Override
     public BaseResponse<List<Order>> gerOrders(String userName) {
-        validateParam(userName, "userName");
-        List<Order> orders = orderMapper.selectList(OrderWrapper.getUserNameWrapper(userName));
-        return new BaseResponse<>(orders);
+//        validateParam(userName, "userName");
+//        List<Order> orders = orderMapper.selectList(OrderWrapper.getUserNameWrapper(userName));
+        return new BaseResponse<>(null);
     }
 
 
@@ -93,10 +86,10 @@ public class OrderServiceImpl extends BaseService implements OrderService {
      */
     @Override
     public BaseResponse<OrderEntity> getOrderDetails(String orderNumber) {
-        validateParam(orderNumber, "orderNumber");
-        Order order = orderMapper.selectOne(OrderWrapper.getOrderNumberWrapper(orderNumber));
-        OrderEntity orderEntity = OrderDataMapper.INSTANCE.orderToEntity(order);
-        return new BaseResponse<>(orderEntity);
+//        validateParam(orderNumber, "orderNumber");
+//        Order order = orderMapper.selectOne(OrderWrapper.getOrderNumberWrapper(orderNumber));
+//        OrderEntity orderEntity = OrderDataMapper.INSTANCE.orderToEntity(order);
+        return new BaseResponse<>(null);
 
     }
 

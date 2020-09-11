@@ -1,8 +1,9 @@
-package com.accumulate.coding.tool;
+package com.accumulate.coding.test.mapper;
 
 import com.accumulate.coding.tool.mapstruct.BasicDesVo;
 import com.accumulate.coding.tool.mapstruct.BasicSourceDesMapper;
 import com.accumulate.coding.tool.mapstruct.BasicSourceVo;
+import com.accumulate.coding.tool.test.base.BaseTest;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;
@@ -12,11 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.Assert;
 
-@SpringBootTest
-class ToolApplicationTests {
-
-    private Logger log = LoggerFactory.getLogger(ToolApplicationTests.class);
-
+@Slf4j
+class MapperTest extends BaseTest {
     @Autowired
     private BasicSourceDesMapper basicSourceDesMapper;
 

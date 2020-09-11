@@ -4,15 +4,20 @@ import com.accumulate.coding.common.enums.ResultCode;
 import com.accumulate.coding.common.error.BaseError;
 import com.accumulate.coding.common.resp.BaseApiResponse;
 import com.accumulate.coding.common.resp.BaseResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @ClassName BaseController
  * @Description TODO
  * @Date 2020/9/8  15:20
  */
-public class BaseController<T> {
+public class BaseController {
 
-    public BaseApiResponse baseApiResponse(T data, String requestId, ResultCode resultCode) {
+    public static final Logger loe = LoggerFactory.getLogger(BaseController.class);
+
+    public BaseApiResponse baseApiResponse(Object data, String requestId, ResultCode resultCode) {
+        String json = "";
         BaseApiResponse baseApiResponse = new BaseApiResponse();
         if (ResultCode.isTrue(resultCode)) {
             baseApiResponse.setData(data);
@@ -25,6 +30,6 @@ public class BaseController<T> {
 
 
     public BaseApiResponse baseApiResponse(BaseResponse response, String requestId) {
-        return baseApiResponse((T) response.getData(), requestId, response.getResultCode());
+        return baseApiResponse(response.getData(), requestId, response.getResultCode());
     }
 }
