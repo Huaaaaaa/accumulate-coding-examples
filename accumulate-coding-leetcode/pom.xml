@@ -7,11 +7,7 @@
         <artifactId>accumulate-coding</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>com.accumuate.coding</groupId>
-    <artifactId>leetcode</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>accumulate-coding-leetcode</name>
-    <description>accumuationg of leetcodes.</description>
+    <artifactId>accumulate-coding-leetcode</artifactId>
 
     <properties>
         <java.version>1.8</java.version>
