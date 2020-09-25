@@ -1,0 +1,39 @@
+spring:
+  redis:
+    open: true
+    leaseTime: 30
+    database: 10
+    timeout: 3000
+    host: 127.0.0.1
+    port: 6379
+    password: workorder
+    lettuce:
+      pool:
+        max-total: 500
+        max-idle: 20
+        min-idle: 8
+        max-wait: 1000
+  #访问方式：localhost:8090/swagger-ui.html
+  swagger:
+    base-path: /**
+    base-package: 'com.accumulate'
+    title: 'spring-boot-swagger-tool'
+    description: '基于Swagger构建的SpringBoot RESTApi 文档'
+    version: '1.0'
+    serviceUrl: 'http://shuidi.tool.com'
+    contact:
+      name: '水滴'
+      url: 'http://shuidi.com'
+      email: 'shuidi.com'
+
+accumulate:
+  coding:
+    web:
+      log:
+        path: ../log
+        level: INFO
+server:
+  servlet:
+    context-path: /
+  port: 8090
+
