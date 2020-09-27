@@ -7,11 +7,8 @@
         <artifactId>accumulate-coding</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>accumulate-coding-leetcode</artifactId>
-
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
+    <artifactId>accumulate-coding-basic</artifactId>
+    <description>内功修炼之Java基础</description>
 
     <build>
         <finalName>core</finalName>

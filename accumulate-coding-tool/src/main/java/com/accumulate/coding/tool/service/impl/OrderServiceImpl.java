@@ -15,7 +15,7 @@ import java.util.List;
  * @Description TODO
  * @Date 2020/8/30  17:40
  */
-@Service
+@Service("orderServiceImpl")
 @Slf4j
 public class OrderServiceImpl extends BaseService implements OrderService {
 

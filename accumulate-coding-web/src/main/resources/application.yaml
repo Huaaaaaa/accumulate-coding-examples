@@ -1,4 +1,14 @@
 spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://127.0.0.1:5432/accumulate_coding?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&stringtype=unspecified
+    username: postgres
+    password: hyc123
+    driverClassName: org.postgresql.Driver
+    initialSize: 5
+    minIdle: 1
+    maxActive: 25
+    maxWait: 60000
   redis:
     open: true
     leaseTime: 30
