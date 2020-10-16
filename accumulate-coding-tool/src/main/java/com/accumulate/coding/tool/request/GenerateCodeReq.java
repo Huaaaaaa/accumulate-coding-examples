@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 
 /**
  *@ClassName GenerateCodeReq
- *@User huayingcao2
  *@Description TODO
  *@Date 2020/9/11  14:53
  */

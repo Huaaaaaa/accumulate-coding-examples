@@ -5,7 +5,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 /**
  * @ClassName BaseTest
- * @User huayingcao2
  * @Description TODO
  * @Date 2020/9/10  18:02
  */

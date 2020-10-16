@@ -5,7 +5,6 @@ import java.lang.reflect.Type;
 
 /**
  * @ClassName ParameterTypeService
- * @User huayingcao2
  * @Description TODO
  * @Date 2020/9/9  17:17
  */

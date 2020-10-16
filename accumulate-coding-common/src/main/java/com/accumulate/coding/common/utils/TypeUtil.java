@@ -4,7 +4,6 @@ import java.lang.reflect.Type;
 
 /**
  * @ClassName TypeUtil
- * @User huayingcao2
  * @Description TODO
  * @Date 2020/9/9  16:47
  */
