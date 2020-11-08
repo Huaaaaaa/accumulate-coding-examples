@@ -1,11 +1,7 @@
 package com.accumulate.coding.basic.design.singleton;
 
-import com.accumulate.coding.basic.utils.JsonUtil;
-import sun.nio.ch.ThreadPool;
-
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * Date:  2020/11/8
@@ -27,12 +23,13 @@ public class SingletonRequest {
 
         //模拟多个线程访问，发现存在一些实例的hashCode不一致，导致出现多例
         ExecutorService excutor = Executors.newFixedThreadPool(200);
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 200; i++) {
             Runnable runnable = () -> {
-//                SingletonLazy lazy1 = SingletonLazy.getInstance();
-//                SingletonLazy lazy2 = SingletonLazy.getInstanceSafely();
-                SingletonLazy lazy3 = SingletonLazy.getInstanceSafelyAndFaster();
-                System.out.println(lazy3.hashCode());
+//                SingletonLazy lazy = SingletonLazy.getInstance();
+//                SingletonLazy safely = SingletonLazy.getInstanceSafely();
+//                SingletonLazy safelyAndFaster = SingletonLazy.getInstanceSafelyAndFaster();
+                SingletonLazy doubleCheck = SingletonLazy.getInstanceByDoubleCheck();
+                System.out.println(doubleCheck.hashCode());
             };
             excutor.execute(runnable);
         }

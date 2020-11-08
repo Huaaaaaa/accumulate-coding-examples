@@ -10,7 +10,7 @@ import lombok.Synchronized;
  */
 public class SingletonLazy {
 
-    private static SingletonLazy instance = null;
+    private static volatile SingletonLazy instance = null;
 
     private String key;
 
@@ -48,13 +48,16 @@ public class SingletonLazy {
 
 
     /**
-     * 优化二：减小锁粒度，在方法中进行加锁，锁被占用时其他线程可以直接返回
+     * 优化二：减小锁粒度，在方法中进行加锁
+     * 特点：稍微减小了CPU开销
+     * 缺点：当线程1和线程2同时访问到synchronized块时，可能创建多个实例
      *
      * @return
      */
     public static SingletonLazy getInstanceSafelyAndFaster() {
-        synchronized (SingletonLazy.class) {
-            if (instance == null) {
+
+        if (instance == null) {
+            synchronized (SingletonLazy.class) {
                 instance = new SingletonLazy();
             }
         }
