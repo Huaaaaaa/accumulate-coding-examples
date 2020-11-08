@@ -1,7 +1,7 @@
 package com.accumulate.coding.basic;
 
 import com.accumulate.coding.basic.res.ShiftRes;
-import com.accumulate.coding.basic.shift.ShiftUtil;
+import com.accumulate.coding.basic.utils.ShiftUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

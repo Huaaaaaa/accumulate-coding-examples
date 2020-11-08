@@ -1,4 +1,4 @@
-package com.accumulate.coding.basic.shift;
+package com.accumulate.coding.basic.utils;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
