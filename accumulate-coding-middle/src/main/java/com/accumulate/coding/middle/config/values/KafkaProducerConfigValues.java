@@ -3,7 +3,7 @@ package com.accumulate.coding.middle.config.values;
 import lombok.Data;
 
 /**
- * Author: huayingcao2
+ * Author: Huaaaaaa
  * Date:  2020/11/10
  * Todo: values of kafka producer configuration
  * Time 10:15
