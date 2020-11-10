@@ -1,0 +1,11 @@
+com:
+  accumulate:
+   kafka:
+    config:
+     producer:
+       bootStrapServers:
+       topic:
+         test.topic:
+       retries:
+     consumer:
+

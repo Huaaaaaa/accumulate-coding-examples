@@ -10,6 +10,15 @@
     <artifactId>accumulate-coding-basic</artifactId>
     <description>内功修炼之Java基础</description>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.hyc.endeavor</groupId>
+            <artifactId>accumulate-coding-middle</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+
     <build>
         <finalName>core</finalName>
         <resources>
