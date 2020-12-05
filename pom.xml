@@ -25,6 +25,7 @@
         <module>accumulate-coding-middle</module>
         <module>accumulate-coding-web</module>
         <module>accumulate-coding-basic</module>
+        <module>accumulate-coding-design</module>
     </modules>
 
     <properties>
