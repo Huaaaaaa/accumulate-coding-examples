@@ -4,7 +4,7 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.swing.*;
 
 /**
- * Author: huayingcao2
+ * Author: Huaaaaaa
  * Date:  2020/12/5
  * Todo: 依赖传递之构造函数传递
  * Time 22:22

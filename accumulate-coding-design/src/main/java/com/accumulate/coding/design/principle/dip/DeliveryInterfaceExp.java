@@ -3,7 +3,7 @@ package com.accumulate.coding.design.principle.dip;
 import java.net.InterfaceAddress;
 
 /**
- * Author: huayingcao2
+ * Author: Huaaaaaa
  * Date:  2020/12/5
  * Todo: 依赖传递之接口传递
  * Time 22:22

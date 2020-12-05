@@ -3,7 +3,7 @@ package com.accumulate.coding.design.principle.dip;
 import com.accumulate.coding.design.principle.dipagainst.WeiXinPay;
 
 /**
- * Author: huayingcao2
+ * Author: Huaaaaaa
  * Date:  2020/12/5
  * Todo:
  * Time 22:14

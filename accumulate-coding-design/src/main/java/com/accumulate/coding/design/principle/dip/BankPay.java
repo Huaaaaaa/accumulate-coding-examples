@@ -1,7 +1,7 @@
 package com.accumulate.coding.design.principle.dip;
 
 /**
- * Author: huayingcao2
+ * Author: Huaaaaaa
  * Date:  2020/12/5
  * Todo: 网银支付实现类
  * Time 22:11
