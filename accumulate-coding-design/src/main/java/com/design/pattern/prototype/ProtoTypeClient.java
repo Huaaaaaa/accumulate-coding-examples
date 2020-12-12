@@ -1,4 +1,4 @@
-package com.design.pattern.protopetype;
+package com.design.pattern.prototype;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

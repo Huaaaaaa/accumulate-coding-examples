@@ -1,9 +1,9 @@
-package com.design.pattern.protopetype;
+package com.design.pattern.prototype;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import java.net.Socket;
+import java.io.*;
 
 /**
  * Author: Huaaaaaa
@@ -11,7 +11,7 @@ import java.net.Socket;
  * Todo:
  * Time 20:08
  */
-public class DeepCopyClone {
+public class DeepCopySerialize {
 
     public static void main(String[] args) {
         cloneDeepCopy();
@@ -19,13 +19,13 @@ public class DeepCopyClone {
 
     private static void cloneDeepCopy() {
         System.out.println("使用clone方法实现深拷贝");
-        CloneSon son = getSon();
-        CloneOriginPeople p1 = new CloneOriginPeople("张飒", 20, 300L, 5000000.00, son);
+        SerializeSon son = getSon();
+        SerializeOriginPeople p1 = new SerializeOriginPeople("张飒", 20, 300L, 5000000.00, son);
         Long startTime = System.currentTimeMillis();
-        CloneOriginPeople p2 = (CloneOriginPeople) p1.clone();
-        CloneOriginPeople p3 = (CloneOriginPeople) p1.clone();
-        CloneOriginPeople p4 = (CloneOriginPeople) p1.clone();
-        CloneOriginPeople p5 = (CloneOriginPeople) p1.clone();
+        SerializeOriginPeople p2 = p1.deepClone();
+        SerializeOriginPeople p3 = p1.deepClone();
+        SerializeOriginPeople p4 = p1.deepClone();
+        SerializeOriginPeople p5 = p1.deepClone();
         System.out.println("timeUsed=" + (System.currentTimeMillis() - startTime));//0
         System.out.println("p1=" + p1.toString() + "=== p1.hashCode=" + p1.hashCode() + "=== p1.son.hashCode=" + p1.getSon().hashCode());
         System.out.println("p2=" + p2.toString() + "=== p2.hashCode=" + p2.hashCode() + "=== p2.son.hashCode=" + p2.getSon().hashCode());
@@ -35,15 +35,17 @@ public class DeepCopyClone {
         System.out.println("p1" + (p1 == p2 ? "等于" : "不等于") + "p2" + "----" + "p1.son" + (p1.getSon() == p2.getSon() ? "等于" : "不等于") + "p2.son");
     }
 
-    private static CloneSon getSon() {
-        CloneSon son = new CloneSon("张飒儿子", 2, 20000l);
+    private static SerializeSon getSon() {
+        SerializeSon son = new SerializeSon("张飒儿子", 2, 20000l);
         return son;
     }
 }
 
 @Data
 @AllArgsConstructor
-class CloneOriginPeople implements Cloneable {
+class SerializeOriginPeople implements Serializable {
+
+    private static final long serialVersionUID = -5093044638424645440L;
     private String name;
 
     private Integer age;
@@ -52,44 +54,43 @@ class CloneOriginPeople implements Cloneable {
 
     private Double deposit;
 
-    private CloneSon son;
+    private SerializeSon son;
 
-    @Override
-    protected Object clone() {
-
-        Object people = null;
+    public SerializeOriginPeople deepClone() {
+        SerializeOriginPeople people = null;
+        ByteArrayOutputStream bos = null;
+        ObjectOutputStream oos = null;
+        ByteArrayInputStream bis = null;
+        ObjectInputStream ois = null;
         try {
-            //基本类型clone
-            people = super.clone();
-            CloneOriginPeople p = (CloneOriginPeople) people;
-            //引用类型的clone，如果不加这行，则son成员就是浅拷贝
-            p.setSon((CloneSon) son.clone());
+            //序列化
+            bos = new ByteArrayOutputStream();
+            oos = new ObjectOutputStream(bos);
+            oos.writeObject(this);
+
+            //反序列化
+            bis = new ByteArrayInputStream(bos.toByteArray());
+            ois = new ObjectInputStream(bis);
+            people = (SerializeOriginPeople) ois.readObject();
+
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
+
         return people;
     }
+
 }
 
 @Data
 @AllArgsConstructor
-class CloneSon implements Cloneable {
+class SerializeSon implements Serializable {
+
+    private static final long serialVersionUID = 8822541756543544620L;
     private String name;
 
     private Integer age;
 
     private Long idNo;
 
-    @Override
-    protected Object clone() {
-
-        CloneSon son = null;
-        try {
-            //基本类型clone
-            son = (CloneSon) super.clone();
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-        return son;
-    }
 }
