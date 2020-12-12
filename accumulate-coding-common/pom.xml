@@ -12,4 +12,12 @@
         <java.version>1.8</java.version>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>io.confluent</groupId>
+            <artifactId>common-utils</artifactId>
+            <version>5.5.0</version>
+        </dependency>
+    </dependencies>
+
 </project>
