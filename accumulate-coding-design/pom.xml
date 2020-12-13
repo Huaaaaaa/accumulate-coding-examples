@@ -25,6 +25,12 @@
             <artifactId>accumulate-coding-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.hyc.endeavor</groupId>
+            <artifactId>accumulate-coding-middle</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 

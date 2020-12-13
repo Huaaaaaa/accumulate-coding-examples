@@ -6,6 +6,6 @@ com:
        bootStrapServers:
        topic:
          test.topic:
-       retries:
+       retries: 3
      consumer:
 
