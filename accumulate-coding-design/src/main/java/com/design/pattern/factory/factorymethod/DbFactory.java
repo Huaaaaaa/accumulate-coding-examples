@@ -1,9 +1,5 @@
 package com.design.pattern.factory.factorymethod;
 
-import com.accumulate.coding.common.utils.RandomUtil;
-
-import java.util.UUID;
-
 /**
  * Author: Huaaaaaa
  * Date:  2020/12/12
