@@ -1,1 +1,30 @@
 装饰者模式
+
+一、模式定义
+装饰模式(Decorator Pattern) ：动态地给一个对象增加一些额外的职责(Responsibility)，就增加对象功能来说，装饰模式比生成子类实现更为灵活。其别名也可以称为包装器(Wrapper)，
+与适配器模式的别名相同，但它们适用于不同的场合。根据翻译的不同，装饰模式也有人称之为“油漆工模式”，它是一种对象结构型模式。
+
+二、模式结构
+装饰模式包含如下角色：
+Component: 抽象构件
+ConcreteComponent: 具体构件
+Decorator: 抽象装饰类（继承并聚合抽象构建）
+ConcreteDecorator: 具体装饰类
+
+三、jdk中的应用
+InputStream
+
+四、示例
+奶茶店卖奶茶问题
+1.不同的奶茶有不同的价格
+如：珍珠奶茶、茉香奶茶、鲜芋奶茶
+2.在购买不同奶茶时可以加不同的小料，不同的小料也有不同的价格
+如：布丁、椰果、珍珠、仙草
+
+客户在点单时在选择单品奶茶的同时还可以选择添加小料，当然添加小料是需要收费的
+
+使用装饰器模式实现这个需求：
+1、Component抽象构件选择饮品，类名为Drink
+2、ConcreteComponent具体构件是不同的奶茶：如BubbleMilkTea、JasmineMilkTea、TaroMilkTea,让它们继承奶茶类MilkTea,MilkTea继承Drink
+3、Decorator抽象装饰类，CondimentDecorator,继承并聚合抽象构建Drink
+4、ConcreteDecorator具体装饰类,如：CondimentPudding、CondimentPearl、CondimentMesona,让它们继承抽象装饰类CondimentDecorator
