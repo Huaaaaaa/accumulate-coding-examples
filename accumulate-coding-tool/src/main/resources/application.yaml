@@ -21,6 +21,18 @@ spring:
     user:
       name: shuidi
       password: 3body
+  #访问方式：localhost:8090/swagger-ui.html
+  swagger:
+    base-path: /**
+    base-package: 'com.accumulate'
+    title: 'spring-boot-swagger-tool'
+    description: '基于Swagger构建的SpringBoot RESTApi 文档'
+    version: '1.0'
+    serviceUrl: 'http://shuidi.tool.com'
+    contact:
+      name: '水滴'
+      url: 'http://shuidi.com'
+      email: 'shuidi.com'
 mybatis-plus:
   typeEnumsPackage: com.accumulate.coding.tool.enums
   configuration:

@@ -22,28 +22,28 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 public class SwaggerConfig {
 
-    @Value("${swagger.base-package}")
+    @Value("${spring.swagger.base-package}")
     private String basePackage;
 
-    @Value("${swagger.title}")
+    @Value("${spring.swagger.title}")
     private String title;
 
-    @Value("${swagger.description}")
+    @Value("${spring.swagger.description}")
     private String description;
 
-    @Value("${swagger.version}")
+    @Value("${spring.swagger.version}")
     private String version;
 
-    @Value("${swagger.contact.name}")
+    @Value("${spring.swagger.contact.name}")
     private String concatName;
 
-    @Value("${swagger.contact.url}")
+    @Value("${spring.swagger.contact.url}")
     private String concatUrl;
 
-    @Value("${swagger.contact.email}")
+    @Value("${spring.swagger.contact.email}")
     private String concatEmail;
 
-    @Value("${swagger.serviceUrl}")
+    @Value("${spring.swagger.serviceUrl}")
     private String serviceUrl;
 
 
