@@ -1,0 +1,37 @@
+com:
+  accumulate:
+   kafka:
+    config:
+     producer:
+       bootStrapServers:
+       topic:
+         test.topic:
+       retries: 3
+     consumer:
+#spring:
+#  security:
+#    basic:
+#      enabled: true
+#      path: /swagger-ui.html
+#    user:
+#      name: shuidi
+#      password: 3body
+
+
+server:
+  port: 9090
+spring:
+  redis:
+    open: true
+    leaseTime: 30
+    database: 10
+    timeout: 3000
+    host: 127.0.0.1
+    port: 6379
+    password: whhik123
+    lettuce:
+      pool:
+        max-total: 500
+        max-idle: 20
+        min-idle: 8
+        max-wait: 1000

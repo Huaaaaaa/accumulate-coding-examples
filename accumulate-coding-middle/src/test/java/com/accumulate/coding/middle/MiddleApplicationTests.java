@@ -1,8 +1,6 @@
 package com.accumulate.coding.middle;
 
-import com.accumulate.coding.middle.api.BaiDuTranslateResult;
 import com.accumulate.coding.middle.api.IBaiDuApi;
-import com.zaxxer.hikari.util.ConcurrentBag;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +10,7 @@ import java.io.UnsupportedEncodingException;
 
 @SpringBootTest
 @Slf4j
-class AccumulateCodingMiddleApplicationTests {
+class MiddleApplicationTests {
 
     @Autowired
     private IBaiDuApi iBaiDuApi;

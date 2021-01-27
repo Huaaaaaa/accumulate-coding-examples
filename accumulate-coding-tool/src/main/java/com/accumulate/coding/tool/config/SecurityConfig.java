@@ -70,7 +70,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().anyRequest().authenticated().and().formLogin().loginPage("/login.html").permitAll()
+        http.authorizeRequests().anyRequest().authenticated().and().formLogin().loginPage("/login.html").loginProcessingUrl("/doLogin").permitAll()
                 .and().csrf().disable();
     }
 }
