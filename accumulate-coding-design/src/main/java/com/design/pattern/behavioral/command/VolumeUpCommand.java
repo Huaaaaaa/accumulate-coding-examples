@@ -1,7 +1,7 @@
 package com.design.pattern.behavioral.command;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2021/1/9
  * Todo:  增加电视音量命令，聚合电视命令接受者
  * Time 18:45

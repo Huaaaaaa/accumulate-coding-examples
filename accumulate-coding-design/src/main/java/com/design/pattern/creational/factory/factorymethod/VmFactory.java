@@ -1,7 +1,7 @@
 package com.design.pattern.creational.factory.factorymethod;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/12
  * Todo: 主机抽工厂类，提供创建主机服务
  * Time 14:07

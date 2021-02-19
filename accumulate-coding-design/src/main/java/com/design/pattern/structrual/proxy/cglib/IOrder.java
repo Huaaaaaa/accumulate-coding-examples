@@ -1,7 +1,7 @@
 package com.design.pattern.structrual.proxy.cglib;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/27
  * Todo: 下单接口
  * Time 21:59

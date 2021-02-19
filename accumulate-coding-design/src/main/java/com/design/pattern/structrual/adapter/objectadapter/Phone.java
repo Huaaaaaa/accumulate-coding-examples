@@ -1,7 +1,7 @@
 package com.design.pattern.structrual.adapter.objectadapter;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/13
  * Todo: 定义一个手机，用适配器进行充电
  * Time 15:43

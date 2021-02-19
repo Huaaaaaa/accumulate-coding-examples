@@ -4,7 +4,7 @@ import com.accumulate.coding.common.utils.JsonUtil;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/12
  * Todo: 用户调用购买接口购买
  * Time 23:13

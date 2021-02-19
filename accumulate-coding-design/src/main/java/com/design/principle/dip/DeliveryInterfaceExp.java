@@ -1,7 +1,7 @@
 package com.design.principle.dip;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/5
  * Todo: 依赖传递之接口传递
  * Time 22:22

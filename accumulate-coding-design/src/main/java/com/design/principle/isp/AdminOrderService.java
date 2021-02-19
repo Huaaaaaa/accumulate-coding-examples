@@ -1,7 +1,7 @@
 package com.design.principle.isp;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/5
  * Todo: 管理员服务实现通用接口与管理员接口，实现自己的方法
  * Time 21:10

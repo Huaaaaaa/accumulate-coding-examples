@@ -1,7 +1,7 @@
 package com.design.principle.dip;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/5
  * Todo: 定义一个支付接口，只有一个支付方法
  * Time 22:09

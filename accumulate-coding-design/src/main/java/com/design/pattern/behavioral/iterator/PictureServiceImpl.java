@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Author: huayingcao2
- * DateTime: 2021/1/30  21:27
+ * @Author: Huaaaaaa
+ * @DateTime: 2021/1/30  21:27
  * Description:
  */
 public class PictureServiceImpl implements PictureService {

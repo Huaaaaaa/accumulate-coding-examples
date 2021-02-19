@@ -1,7 +1,7 @@
 package com.design.principle.srpagainst;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/5
  * Todo:   定义一个接口，有一个支付方法
  * Time 23:46

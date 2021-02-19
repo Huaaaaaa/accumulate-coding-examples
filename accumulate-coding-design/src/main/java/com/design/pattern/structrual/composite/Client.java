@@ -3,7 +3,7 @@ package com.design.pattern.structrual.composite;
 import java.math.BigDecimal;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/20
  * Todo: 组合模式之安全方式：客户端需要只要树枝和树叶构件
  * Time 16:54

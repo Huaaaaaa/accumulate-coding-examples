@@ -3,7 +3,7 @@ package com.design.principle.uml.dependence;
 import lombok.Data;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/6
  * Todo: 学生
  * Time 16:45

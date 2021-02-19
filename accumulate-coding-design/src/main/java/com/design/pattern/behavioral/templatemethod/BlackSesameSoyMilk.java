@@ -1,7 +1,7 @@
 package com.design.pattern.behavioral.templatemethod;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2021/1/5
  * Todo: 制作纯豆浆：只加佐料不加豆浆
  * Time 11:37

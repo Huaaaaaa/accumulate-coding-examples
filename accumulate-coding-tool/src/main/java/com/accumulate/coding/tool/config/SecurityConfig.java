@@ -59,7 +59,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**
      * 如果我们使用 XML 来配置 Spring Security ，里边会有一个重要的标签 <http>，HttpSecurity 提供的配置方法 都对应了该标签。
-     * authorizeRequests 对应了 <intercept-url>。
+     * @AuthorizeRequests 对应了 <intercept-url>。
      * formLogin 对应了 <formlogin>。
      * and 方法表示结束当前标签，上下文回到HttpSecurity，开启新一轮的配置。
      * permitAll 表示登录相关的页面/接口不要被拦截。
@@ -70,7 +70,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().anyRequest().authenticated().and().formLogin().loginPage("/login.html").loginProcessingUrl("/doLogin").permitAll()
+        http.@AuthorizeRequests().anyRequest().authenticated().and().formLogin().loginPage("/login.html").loginProcessingUrl("/doLogin").permitAll()
                 .and().csrf().disable();
     }
 }

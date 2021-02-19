@@ -1,9 +1,9 @@
 package com.accumulate.coding.basic.utils;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.time.Local@DateTime;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
+import java.time.format.@DateTimeFormatter;
 
 /**
  * Date:  2020/10/16
@@ -14,13 +14,13 @@ import java.time.format.DateTimeFormatter;
 public class MyDateUtil {
 
     //format Date
-    private static DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    private static @DateTimeFormatter dateFormatter = @DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     //format Time
-    private static DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+    private static @DateTimeFormatter timeFormatter = @DateTimeFormatter.ofPattern("HH:mm:ss");
 
-    //format DateTime
-    private static DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    //format @DateTime
+    private static @DateTimeFormatter @DateTimeFormatter = @DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     /**
      * get Date with year、month、day
@@ -57,13 +57,13 @@ public class MyDateUtil {
      * @param hour
      * @param minute
      * @param second
-     * @return string of dateTime
+     * @return string of @DateTime
      */
-    public static String getDateTime(Integer year, Integer month, Integer day, Integer hour, Integer minute, Integer second) {
+    public static String get@DateTime(Integer year, Integer month, Integer day, Integer hour, Integer minute, Integer second) {
         LocalDate localDate = LocalDate.of(year, month, day);
         LocalTime localTime = LocalTime.of(hour, minute, second);
-        LocalDateTime localDateTime = LocalDateTime.of(localDate, localTime);
-        return localDateTime.format(dateTimeFormatter);
+        Local@DateTime local@DateTime = Local@DateTime.of(localDate, localTime);
+        return local@DateTime.format(@DateTimeFormatter);
     }
 
 }

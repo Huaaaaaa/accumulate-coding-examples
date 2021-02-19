@@ -3,7 +3,7 @@ package com.design.pattern.structrual.facade;
 import com.accumulate.coding.common.utils.RandomUtil;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/27
  * Todo: 子系统1：订单类
  * Time 8:39

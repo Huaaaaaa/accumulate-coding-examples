@@ -1,7 +1,7 @@
 package com.design.principle.dip;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/5
  * Todo: JD支付实现类
  * Time 22:12

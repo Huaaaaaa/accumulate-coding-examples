@@ -5,7 +5,7 @@ import com.design.principle.uml.dependence.Student;
 import java.util.List;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/6
  * Todo: 一个学生管理抽象类
  * Time 17:26

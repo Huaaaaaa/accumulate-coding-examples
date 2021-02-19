@@ -3,7 +3,7 @@ package com.design.principle.uml.dependence;
 import com.accumulate.coding.common.utils.JsonUtil;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/6
  * Todo:
  * Time 17:22

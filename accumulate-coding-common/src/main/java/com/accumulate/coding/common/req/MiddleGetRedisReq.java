@@ -7,8 +7,8 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 
 /**
- * Author: Huaaaaaa
- * DateTime: 2021/1/27  16:14
+ * @Author: Huaaaaaa
+ * @DateTime: 2021/1/27  16:14
  * Description:
  */
 @Data

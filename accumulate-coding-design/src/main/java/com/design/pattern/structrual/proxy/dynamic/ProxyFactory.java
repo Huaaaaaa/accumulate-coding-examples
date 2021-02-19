@@ -3,7 +3,7 @@ package com.design.pattern.structrual.proxy.dynamic;
 import java.lang.reflect.Proxy;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/27
  * Todo: 权限代理类，在执行一些方法之前校验是否有操作权限
  * Time 21:39

@@ -5,8 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * Author: huayingcao2
- * DateTime: 2021/1/30  21:05
+ * @Author: Huaaaaaa
+ * @DateTime: 2021/1/30  21:05
  * Description:  创建一个照片
  */
 @Data

@@ -3,7 +3,7 @@ package com.design.principle.lspagainst;
 import java.math.BigDecimal;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/6
  * Todo: 定义一个支付类，实现现金支付
  * Time 8:18

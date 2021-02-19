@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 import java.util.*;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/27
  * Todo: 子系统3：优惠券类
  * Time 9:11

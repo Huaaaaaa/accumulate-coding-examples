@@ -3,7 +3,7 @@ package com.design.pattern.creational.factory.simplefactory;
 import java.util.UUID;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/12
  * Todo:  提供数据库服务
  * Time 12:02

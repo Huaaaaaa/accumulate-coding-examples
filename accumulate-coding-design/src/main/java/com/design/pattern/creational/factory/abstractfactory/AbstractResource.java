@@ -1,7 +1,7 @@
 package com.design.pattern.creational.factory.abstractfactory;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/12
  * Todo: 定义一个抽象资源类，用来创建不用的资源
  * Time 14:08

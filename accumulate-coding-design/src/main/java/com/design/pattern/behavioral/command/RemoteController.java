@@ -1,7 +1,7 @@
 package com.design.pattern.behavioral.command;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2021/1/9
  * Todo: 命令调用者类：遥控器，需要设置命令
  * Time 19:04

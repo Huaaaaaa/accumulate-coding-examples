@@ -1,7 +1,7 @@
 package com.design.pattern.creational.builder;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/12
  * Todo: 定义一个抽象的购买构造器
  * Time 22:53

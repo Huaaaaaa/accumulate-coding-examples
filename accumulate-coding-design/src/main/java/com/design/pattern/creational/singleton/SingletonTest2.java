@@ -1,7 +1,7 @@
 package com.design.pattern.creational.singleton;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/6
  * Todo: 第二种实现方式，饿汉式的静态代码块
  * Time 19:36

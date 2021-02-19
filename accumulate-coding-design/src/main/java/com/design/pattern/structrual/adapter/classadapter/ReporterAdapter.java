@@ -7,7 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.io.UnsupportedEncodingException;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/13
  * Todo: 定义一个记者适配器类（翻译器），用来将中文翻译成英文
  * Time 10:09

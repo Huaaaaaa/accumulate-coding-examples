@@ -3,7 +3,7 @@ package com.design.principle.uml.aggregation;
 import lombok.Data;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/6
  * Todo: 脚
  * Time 17:34

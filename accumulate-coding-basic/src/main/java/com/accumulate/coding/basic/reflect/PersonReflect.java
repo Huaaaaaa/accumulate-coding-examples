@@ -1,7 +1,7 @@
 package com.accumulate.coding.basic.reflect;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/11/28
  * Todo:
  * Time 10:54

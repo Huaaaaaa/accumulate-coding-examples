@@ -1,7 +1,7 @@
 package com.design.pattern.structrual.flyweight;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/27
  * Todo: 具体享元方块扑克
  * Time 13:00

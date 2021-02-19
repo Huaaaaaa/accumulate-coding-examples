@@ -3,7 +3,7 @@ package com.design.pattern.structrual.bridge;
 import java.sql.*;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/14
  * Todo:  桥接模式在jdbc中的应用
  * Time 16:32

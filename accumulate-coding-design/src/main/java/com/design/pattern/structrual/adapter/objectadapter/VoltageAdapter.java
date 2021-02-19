@@ -1,7 +1,7 @@
 package com.design.pattern.structrual.adapter.objectadapter;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/13
  * Todo:  定义一个电压适配器，将220v电压转化成5v目标电压
  * Time 15:31

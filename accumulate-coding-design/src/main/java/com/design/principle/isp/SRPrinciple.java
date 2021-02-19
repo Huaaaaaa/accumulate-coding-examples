@@ -1,7 +1,7 @@
 package com.design.principle.isp;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/5
  * Todo: Single Responsibility Principle
  * Time 19:33

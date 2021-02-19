@@ -3,7 +3,7 @@ package com.design.pattern.structrual.facade;
 import java.math.BigDecimal;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/27
  * Todo: 外观类：buy
  * desc: 外观类依赖三个子系统完成下单、查价、校验价格、查优惠信息等流程，最后返回给客户最终的订单信息，包含应该支付的价格，而无需自己调用相关系统的接口进行查询

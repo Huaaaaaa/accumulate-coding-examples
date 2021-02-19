@@ -5,7 +5,7 @@ import com.design.principle.uml.dependence.Student;
 import java.util.List;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/6
  * Todo: ClassServiceImpl实现ClassService接口，他们属于实现关系，即面向接口编程
  * Time 17:32

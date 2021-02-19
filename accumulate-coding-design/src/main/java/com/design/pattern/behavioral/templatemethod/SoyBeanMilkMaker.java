@@ -3,7 +3,7 @@ package com.design.pattern.behavioral.templatemethod;
 import org.springframework.util.StringUtils;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2021/1/5
  * Todo: 豆浆机
  * Time 10:50

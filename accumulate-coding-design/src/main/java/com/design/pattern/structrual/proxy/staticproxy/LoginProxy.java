@@ -1,7 +1,7 @@
 package com.design.pattern.structrual.proxy.staticproxy;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/27
  * Todo: 登录代理类，在执行登录前后记录时间，最后统计出执行时长
  * Time 21:25

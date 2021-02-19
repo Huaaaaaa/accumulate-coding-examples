@@ -1,7 +1,7 @@
 package com.design.principle.ocp;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/6
  * Todo:  三角形，继承图形类并重载方法drawShape
  * Time 10:23

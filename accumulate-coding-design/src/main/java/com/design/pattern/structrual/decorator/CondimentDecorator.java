@@ -3,7 +3,7 @@ package com.design.pattern.structrual.decorator;
 import java.math.BigDecimal;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/15
  * Todo: 小料装饰器:和Component行程继承和组合的关系，继承是让小料定义自己的价格，组合是获取奶茶的价格
  * Time 11:18

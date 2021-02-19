@@ -22,7 +22,7 @@ import java.io.Serializable;
 import java.time.Duration;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/11/10
  * Todo: Configuration about redis
  * Time 9:54

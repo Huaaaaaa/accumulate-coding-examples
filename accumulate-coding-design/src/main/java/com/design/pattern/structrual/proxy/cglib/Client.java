@@ -7,7 +7,7 @@ import com.design.pattern.structrual.facade.Goods;
 import java.math.BigDecimal;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/27
  * Todo:
  * Time 22:15

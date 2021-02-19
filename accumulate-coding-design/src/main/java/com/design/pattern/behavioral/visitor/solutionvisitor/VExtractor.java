@@ -1,7 +1,7 @@
 package com.design.pattern.behavioral.visitor.solutionvisitor;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2021/1/10
  * Todo: 定义一个具体的访问者，实现抽象访问者
  * Time 9:21

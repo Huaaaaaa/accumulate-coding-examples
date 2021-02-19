@@ -1,7 +1,7 @@
 package com.design.principle.isp;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/5
  * Todo: 用户服务实现通用接口与用户接口，实现自己的方法
  * Time 21:09

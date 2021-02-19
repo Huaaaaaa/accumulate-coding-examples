@@ -1,7 +1,7 @@
 package com.design.pattern.behavioral.command;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2021/1/9
  * Todo:  关空调命令，聚合空调命令接受者
  * Time 18:58

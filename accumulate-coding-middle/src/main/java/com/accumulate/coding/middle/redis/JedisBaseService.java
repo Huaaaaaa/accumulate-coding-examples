@@ -3,8 +3,8 @@ package com.accumulate.coding.middle.redis;
 import redis.clients.jedis.Jedis;
 
 /**
- * Author: Huaaaaaa
- * DateTime: 2021/1/26  20:21
+ * @Author: Huaaaaaa
+ * @DateTime: 2021/1/26  20:21
  * Description:
  */
 public class JedisBaseService {

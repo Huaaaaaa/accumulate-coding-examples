@@ -1,7 +1,7 @@
 package com.design.pattern.structrual.decorator;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/20
  * Todo:
  * Time 10:05

@@ -1,7 +1,7 @@
 package com.design.pattern.structrual.adapter.interfaceadapter;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/13
  * Todo: 定义一个电压适配接口，适配不同的电压
  * Time 15:55

@@ -5,7 +5,7 @@ import com.design.principle.uml.dependence.Student;
 import java.util.List;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/6
  * Todo: StudentServiceImpl与AbstractStudentManage是泛化（继承）关系
  * Time 17:28

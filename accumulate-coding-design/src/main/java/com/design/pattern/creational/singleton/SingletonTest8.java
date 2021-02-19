@@ -1,7 +1,7 @@
 package com.design.pattern.creational.singleton;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/6
  * Todo: 第八种实现方式：枚举方式（推荐使用）
  * Time 19:36

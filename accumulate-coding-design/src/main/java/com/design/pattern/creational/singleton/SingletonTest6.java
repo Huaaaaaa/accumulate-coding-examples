@@ -1,7 +1,7 @@
 package com.design.pattern.creational.singleton;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/6
  * Todo: 第六种实现方式：懒汉式之双重检查机制方式（推荐使用）
  * Time 19:36

@@ -1,7 +1,7 @@
 package com.design.pattern.behavioral.visitor.solutionvisitor;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2021/1/10
  * Todo: 定义一个抽象访问者接口，提供不同元素的访问方法
  * Time 9:16

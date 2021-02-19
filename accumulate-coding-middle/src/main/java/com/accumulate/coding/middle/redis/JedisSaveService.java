@@ -6,8 +6,8 @@ import java.util.*;
 import java.util.logging.Handler;
 
 /**
- * Author: Huaaaaaa
- * DateTime: 2021/1/26  19:57
+ * @Author: Huaaaaaa
+ * @DateTime: 2021/1/26  19:57
  * Description:
  */
 public interface JedisSaveService<T> {

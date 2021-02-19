@@ -3,7 +3,7 @@ package com.accumulate.coding.common.utils;
 import java.util.UUID;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/12
  * Todo:
  * Time 15:06

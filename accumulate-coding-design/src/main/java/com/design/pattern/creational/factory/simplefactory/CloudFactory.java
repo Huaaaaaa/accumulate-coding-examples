@@ -1,7 +1,7 @@
 package com.design.pattern.creational.factory.simplefactory;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/12
  * Todo: 一个云工厂，生产云产品
  * Time 12:03

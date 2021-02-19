@@ -1,7 +1,7 @@
 package com.design.pattern.behavioral.templatemethod;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2021/1/5
  * Todo:
  * Time 11:02

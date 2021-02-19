@@ -3,7 +3,7 @@ package com.design.pattern.creational.factory.abstractfactory;
 import com.accumulate.coding.common.utils.RandomUtil;
 
 /**
- * Author:
+ * @Author:
  * Date:  2020/12/12
  * Todo: 华北地区数据库资源
  * Time 18:06

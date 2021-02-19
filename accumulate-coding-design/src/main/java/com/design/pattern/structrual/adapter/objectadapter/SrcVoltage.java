@@ -1,7 +1,7 @@
 package com.design.pattern.structrual.adapter.objectadapter;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/13
  * Todo: 源充电器电压为220v
  * Time 15:34

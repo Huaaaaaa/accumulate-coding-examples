@@ -3,7 +3,7 @@ package com.design.pattern.creational.factory.factorymethod;
 import com.accumulate.coding.common.utils.RandomUtil;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/12
  * Todo:
  * Time 15:15

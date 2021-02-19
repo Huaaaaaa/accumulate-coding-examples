@@ -3,7 +3,7 @@ package com.design.pattern.structrual.decorator;
 import java.io.*;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/20
  * Todo: 装饰模式在jdk中的应用
  * Time 11:42

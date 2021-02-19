@@ -3,7 +3,7 @@ package com.design.pattern.structrual.proxy.cglib;
 import com.accumulate.coding.common.utils.RandomUtil;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/27
  * Todo:
  * Time 21:59

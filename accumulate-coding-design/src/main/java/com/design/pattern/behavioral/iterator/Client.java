@@ -7,8 +7,8 @@ import java.io.PipedInputStream;
 import java.util.Scanner;
 
 /**
- * Author: huayingcao2
- * DateTime: 2021/1/30  21:32
+ * @Author: Huaaaaaa
+ * @DateTime: 2021/1/30  21:32
  * Description: 客户端使用迭代器
  */
 public class Client {

@@ -3,7 +3,7 @@ package com.design.pattern.structrual.decorator;
 import java.math.BigDecimal;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/15
  * Todo: 小料布丁
  * Time 11:24

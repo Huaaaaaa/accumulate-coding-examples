@@ -1,7 +1,7 @@
 package com.design.pattern.structrual.adapter.objectadapter;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/13
  * Todo:
  * Time 15:48

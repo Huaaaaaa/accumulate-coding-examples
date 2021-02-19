@@ -5,7 +5,7 @@ import com.design.principle.uml.dependence.Student;
 import java.util.List;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/6
  * Todo:
  * Time 17:30

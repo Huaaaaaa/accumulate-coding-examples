@@ -3,7 +3,7 @@ package com.design.pattern.behavioral.visitor.solution3;
 import com.design.pattern.behavioral.visitor.solution1.PptFile;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2021/1/10
  * Todo: 定义访问者，访问者提供具体元素的具体访问方法
  * Time 8:43

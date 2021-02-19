@@ -3,7 +3,7 @@ package com.design.enums;
 import java.util.Arrays;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/6
  * Todo:
  * Time 8:30

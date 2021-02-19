@@ -1,7 +1,7 @@
 package com.design.principle.dip;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/5
  * Todo:
  * Time 22:14

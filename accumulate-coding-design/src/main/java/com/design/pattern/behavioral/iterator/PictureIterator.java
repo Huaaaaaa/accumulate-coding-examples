@@ -4,8 +4,8 @@ import java.io.PipedInputStream;
 import java.util.List;
 
 /**
- * Author: huayingcao2
- * DateTime: 2021/1/30  21:13
+ * @Author: Huaaaaaa
+ * @DateTime: 2021/1/30  21:13
  * Description:
  */
 public class PictureIterator implements CustomIterator {

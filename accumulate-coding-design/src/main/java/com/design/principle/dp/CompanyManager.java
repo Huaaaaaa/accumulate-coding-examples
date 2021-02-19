@@ -5,7 +5,7 @@ import com.design.vo.Department;
 import java.util.List;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/6
  * Todo: 企业管理类
  * Time 11:36

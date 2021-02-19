@@ -5,7 +5,7 @@ import org.springframework.util.Assert;
 import java.util.Scanner;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/12
  * Todo: 云商城，提供购买能力
  * Time 12:17

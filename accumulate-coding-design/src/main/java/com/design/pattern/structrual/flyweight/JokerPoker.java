@@ -1,7 +1,7 @@
 package com.design.pattern.structrual.flyweight;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/27
  * Todo:
  * Time 13:55

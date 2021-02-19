@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 import java.util.stream.Stream;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/11/28
  * Todo: 通过反射的方式设置Person的head属性
  * Time 11:00

@@ -8,8 +8,8 @@ import lombok.ToString;
 import java.io.Serializable;
 
 /**
- * Author: Huaaaaaa
- * DateTime: 2021/1/27  11:40
+ * @Author: Huaaaaaa
+ * @DateTime: 2021/1/27  11:40
  * Description:  redis请求
  */
 @Data

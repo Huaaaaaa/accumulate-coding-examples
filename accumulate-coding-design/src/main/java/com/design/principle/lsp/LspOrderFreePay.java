@@ -5,7 +5,7 @@ import com.design.enums.UserTypeEnum;
 import java.math.BigDecimal;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/6
  * Todo: 定义一个免支付类
  * Time 9:20

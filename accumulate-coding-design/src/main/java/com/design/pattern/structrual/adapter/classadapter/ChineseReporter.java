@@ -1,7 +1,7 @@
 package com.design.pattern.structrual.adapter.classadapter;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/13
  * Todo: 定义一个中文记者类
  * Time 10:06

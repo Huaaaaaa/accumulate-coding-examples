@@ -5,8 +5,8 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Author: Huaaaaaa
- * DateTime: 2021/1/26  20:06
+ * @Author: Huaaaaaa
+ * @DateTime: 2021/1/26  20:06
  * Description:
  */
 public interface JedisGetService<T> {

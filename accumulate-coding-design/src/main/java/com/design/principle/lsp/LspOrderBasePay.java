@@ -3,7 +3,7 @@ package com.design.principle.lsp;
 import java.math.BigDecimal;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/6
  * Todo: 定义一个基类
  * Time 9:19

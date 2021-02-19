@@ -6,7 +6,7 @@ import lombok.var;
 import java.math.BigDecimal;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/6
  * Todo: 定义一个用户支付类，区分要支付和免支付
  * Time 8:25

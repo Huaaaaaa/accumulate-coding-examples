@@ -1,7 +1,7 @@
 package com.design.pattern.structrual.bridge;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/14
  * Todo:
  * Time 16:10

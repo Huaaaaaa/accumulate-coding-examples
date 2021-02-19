@@ -5,7 +5,7 @@ import com.accumulate.coding.common.utils.JsonUtil;
 import java.math.BigDecimal;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/27
  * Todo: 客户类，下单购买
  * Time 9:35

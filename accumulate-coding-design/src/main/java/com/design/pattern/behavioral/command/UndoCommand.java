@@ -1,7 +1,7 @@
 package com.design.pattern.behavioral.command;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2021/1/9
  * Todo:
  * Time 19:39

@@ -3,7 +3,7 @@ package com.design.pattern.structrual.proxy.dynamic;
 import org.springframework.util.StringUtils;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/27
  * Todo: 目标类
  * Time 21:37

@@ -1,7 +1,7 @@
 package com.design.pattern.structrual.bridge;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/14
  * Todo: 包包抽象类（样式）
  * Time 10:45

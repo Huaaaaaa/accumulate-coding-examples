@@ -1,7 +1,7 @@
 package com.design.pattern.behavioral.visitor.solution2;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2021/1/10
  * Todo: 定义extract类，重载extract2txt方法
  * Time 8:29

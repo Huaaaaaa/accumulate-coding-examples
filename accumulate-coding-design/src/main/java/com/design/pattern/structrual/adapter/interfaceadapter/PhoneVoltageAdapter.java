@@ -1,7 +1,7 @@
 package com.design.pattern.structrual.adapter.interfaceadapter;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/13
  * Todo: 定义一个手机电压适配器
  * Time 15:59

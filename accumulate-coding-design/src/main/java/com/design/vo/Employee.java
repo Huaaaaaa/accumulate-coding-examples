@@ -3,7 +3,7 @@ package com.design.vo;
 import java.io.Serializable;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/6
  * Todo: 企业员工类
  * Time 11:15

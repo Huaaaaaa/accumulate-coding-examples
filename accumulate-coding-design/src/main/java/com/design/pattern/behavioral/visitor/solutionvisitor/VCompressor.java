@@ -1,7 +1,7 @@
 package com.design.pattern.behavioral.visitor.solutionvisitor;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2021/1/10
  * Todo: 新增压缩功能时，提供压缩功能的访问者，在该访问者中提供对每种元素的具体压缩方法
  * Time 9:31

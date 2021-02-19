@@ -1,7 +1,7 @@
 package com.design.principle.srpagainst;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/5
  * Todo:
  * Time 23:47

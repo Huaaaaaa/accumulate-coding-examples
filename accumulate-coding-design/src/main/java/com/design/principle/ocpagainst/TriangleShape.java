@@ -1,7 +1,7 @@
 package com.design.principle.ocpagainst;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/6
  * Todo:  三角形
  * Time 10:23

@@ -5,7 +5,7 @@ import com.design.pattern.behavioral.visitor.solution2.PptFile2;
 import com.design.pattern.behavioral.visitor.solution2.WordFile2;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2021/1/10
  * Todo: 新增压缩功能，提供访问者
  * Time 9:07

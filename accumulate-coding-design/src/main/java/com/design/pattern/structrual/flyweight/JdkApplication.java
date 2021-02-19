@@ -1,7 +1,7 @@
 package com.design.pattern.structrual.flyweight;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/27
  * Todo: 享元模式在jdk中的应用:Integer
  * Time 14:36

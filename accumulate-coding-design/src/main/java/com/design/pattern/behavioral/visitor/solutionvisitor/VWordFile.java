@@ -1,7 +1,7 @@
 package com.design.pattern.behavioral.visitor.solutionvisitor;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2021/1/10
  * Todo: 定义一个具体元素VWordFile，实现抽象元素中的方法
  * Time 9:17

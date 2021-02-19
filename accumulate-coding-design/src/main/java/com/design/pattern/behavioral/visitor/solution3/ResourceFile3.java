@@ -1,7 +1,7 @@
 package com.design.pattern.behavioral.visitor.solution3;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2021/1/10
  * Todo: 定义一个抽象元素，提供接收访问者方法
  * Time 8:27

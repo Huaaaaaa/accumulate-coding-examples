@@ -3,7 +3,7 @@ package com.design.pattern.behavioral.visitor.solution3;
 import com.design.pattern.behavioral.visitor.solution2.ResourceFile2;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2021/1/10
  * Todo: 具体元素：pdf文件
  * Time 8:27

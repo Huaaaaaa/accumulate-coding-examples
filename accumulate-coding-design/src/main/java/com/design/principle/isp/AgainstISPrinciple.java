@@ -1,7 +1,7 @@
 package com.design.principle.isp;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/5
  * Todo: An example to against ISP(Interface Segregation Principle)
  * Time 19:32

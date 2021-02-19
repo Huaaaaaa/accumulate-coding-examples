@@ -3,7 +3,7 @@ package com.design.principle.lspagainst;
 import java.math.BigDecimal;
 
 /**
- * Author: Huaaaaaa
+ * @Author: Huaaaaaa
  * Date:  2020/12/6
  * Todo: 定义一个免支付类继承支付类，并重写支付方法
  * Time 8:21
