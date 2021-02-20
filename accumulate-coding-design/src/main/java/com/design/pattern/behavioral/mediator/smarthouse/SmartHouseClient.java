@@ -20,7 +20,5 @@ public class SmartHouseClient {
         smartHouseMediator.send(CommonConstants.MODULE_CINEMA);
         Thread.sleep(3000);
         smartHouseMediator.send(CommonConstants.MODULE_SLEEP);
-
-
     }
 }
