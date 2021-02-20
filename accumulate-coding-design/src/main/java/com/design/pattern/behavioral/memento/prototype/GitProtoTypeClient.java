@@ -1,7 +1,6 @@
 package com.design.pattern.behavioral.memento.prototype;
 
 import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
-import com.design.pattern.behavioral.memento.git.MementoCommitLog;
 
 import java.util.List;
 import java.util.Scanner;
