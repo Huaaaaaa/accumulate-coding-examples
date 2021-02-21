@@ -63,7 +63,7 @@ public class CodeUtil {
         GlobalConfig gc = new GlobalConfig();
         String projectPath = System.getProperty(project);
         gc.setOutputDir(projectPath + "/src/main/java");
-        gc.set@Author("me");
+        gc.setAuthor("me");
         gc.setOpen(false);
         gc.setSwagger2(true);
         autoGenerator.setGlobalConfig(gc);

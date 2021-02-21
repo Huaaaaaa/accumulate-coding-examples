@@ -39,7 +39,7 @@ public class OrderEntity implements Serializable {
 
     private String createTime;
 
-    private String up@DateTime;
+    private String upDateTime;
 
     private String payTime;
 
