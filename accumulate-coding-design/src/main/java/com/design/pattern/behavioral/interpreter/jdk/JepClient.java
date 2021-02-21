@@ -1,9 +1,7 @@
 package com.design.pattern.behavioral.interpreter.jdk;
 
-import org.nfunk.jep.JEP;
-
 /**
- * @Author: huayingcao2
+ * @Author: Huaaaaaa
  * @DateTime: 2021/2/21  9:10
  * @Description: jdk中的解释器
  */
