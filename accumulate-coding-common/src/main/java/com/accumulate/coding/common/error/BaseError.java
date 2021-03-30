@@ -27,6 +27,10 @@ public class BaseError implements Serializable {
 
     private Map<String, Object> details;
 
+    public BaseError(Integer code, String message) {
+        this.code = code;
+        this.message = message;
+    }
 
     public static BaseError error(ResultCode resultCode) {
         return new BaseError(resultCode.getCode(), resultCode.getMessage(), null);

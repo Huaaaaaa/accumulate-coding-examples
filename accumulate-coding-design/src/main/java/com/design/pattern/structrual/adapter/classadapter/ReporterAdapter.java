@@ -1,9 +1,9 @@
 package com.design.pattern.structrual.adapter.classadapter;
 
-import com.design.api.BaiDuApiImpl;
-import com.design.api.IBaiDuApi;
+import com.accumulate.coding.middle.api.IBaiDuApi;
 import lombok.extern.slf4j.Slf4j;
 
+import javax.annotation.Resource;
 import java.io.UnsupportedEncodingException;
 
 /**
@@ -15,13 +15,15 @@ import java.io.UnsupportedEncodingException;
 @Slf4j
 public class ReporterAdapter extends ChineseReporter implements IReporter {
 
+    @Resource
+    private IBaiDuApi iBaiDuApi;
+
     @Override
     public String translate() {
-        IBaiDuApi BaiDuApiImpl = new BaiDuApiImpl();
         String src = say();
         String des = "";
         try {
-            des = BaiDuApiImpl.translate(src, "zh", "en");
+            des = iBaiDuApi.translate(src, "zh", "en");
         } catch (UnsupportedEncodingException e) {
             log.error("ReporterAdapter translate error={}", e);
         }
