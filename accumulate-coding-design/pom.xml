@@ -8,7 +8,6 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <artifactId>accumulate-coding-design</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -33,35 +32,35 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/asm/asm -->
-        <dependency>
+        <!--<dependency>
             <groupId>asm</groupId>
             <artifactId>asm</artifactId>
             <version>3.3.1</version>
-        </dependency>
+        </dependency>-->
 
 
         <!-- https://mvnrepository.com/artifact/asm/asm-commons -->
-        <dependency>
+        <!--<dependency>
             <groupId>asm</groupId>
             <artifactId>asm-commons</artifactId>
             <version>3.3.1</version>
-        </dependency>
+        </dependency>-->
 
 
         <!-- https://mvnrepository.com/artifact/asm/asm-tree -->
-        <dependency>
+        <!--<dependency>
             <groupId>asm</groupId>
             <artifactId>asm-tree</artifactId>
             <version>3.3.1</version>
-        </dependency>
+        </dependency>-->
 
 
         <!-- https://mvnrepository.com/artifact/cglib/cglib -->
-        <dependency>
+        <!--<dependency>
             <groupId>cglib</groupId>
             <artifactId>cglib</artifactId>
             <version>3.3.0</version>
-        </dependency>
+        </dependency>-->
 
         <!-- https://mvnrepository.com/artifact/jep/jep -->
        <!-- <dependency>
