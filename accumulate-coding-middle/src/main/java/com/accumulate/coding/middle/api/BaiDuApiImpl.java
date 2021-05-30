@@ -4,6 +4,7 @@ import com.accumulate.coding.common.utils.JsonUtil;
 import com.accumulate.coding.common.utils.RandomUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.client.RestTemplate;
@@ -21,6 +22,7 @@ import java.util.Map;
  */
 @Slf4j
 @Service
+@Component
 public class BaiDuApiImpl implements IBaiDuApi {
 
     private static final String APP_ID = "20201213000646027";

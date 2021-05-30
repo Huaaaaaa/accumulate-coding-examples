@@ -49,7 +49,7 @@ public class Order implements Serializable {
     private Long createTime;
 
     @Column(name = "update_time")
-    private Long up@DateTime;
+    private Long updateTime;
 
     @Column(name = "order_status")
     @Enumerated(EnumType.ORDINAL)

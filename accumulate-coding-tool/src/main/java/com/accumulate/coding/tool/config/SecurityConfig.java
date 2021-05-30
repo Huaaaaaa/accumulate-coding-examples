@@ -49,6 +49,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**
      * web.ignoring() 用来配置忽略掉的 URL 地址，一般对于静态文件，我们可以采用此操作。
+     *
      * @param web
      * @throws Exception
      */
@@ -59,18 +60,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**
      * 如果我们使用 XML 来配置 Spring Security ，里边会有一个重要的标签 <http>，HttpSecurity 提供的配置方法 都对应了该标签。
+     *
+     * @param http
+     * @throws Exception
      * @AuthorizeRequests 对应了 <intercept-url>。
      * formLogin 对应了 <formlogin>。
      * and 方法表示结束当前标签，上下文回到HttpSecurity，开启新一轮的配置。
      * permitAll 表示登录相关的页面/接口不要被拦截。
      * 最后记得关闭 csrf ，关于 csrf 问题我到后面专门和大家说。
-     *
-     * @param http
-     * @throws Exception
      */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.@AuthorizeRequests().anyRequest().authenticated().and().formLogin().loginPage("/login.html").loginProcessingUrl("/doLogin").permitAll()
+        http.authorizeRequests().anyRequest().authenticated().and().formLogin().loginPage("/login.html").loginProcessingUrl("/doLogin").permitAll()
                 .and().csrf().disable();
     }
 }

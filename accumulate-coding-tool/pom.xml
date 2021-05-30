@@ -54,33 +54,4 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
-
-    <build>
-        <finalName>core</finalName>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <!-- 本地ide启动时候注释掉对应的excludes，然后增加对应profile参数即可-->
-                <!--                <excludes>-->
-                <!--                    <exclude>*.yaml</exclude>-->
-                <!--                </excludes>-->
-                <filtering>true</filtering>
-            </resource>
-        </resources>
-
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>

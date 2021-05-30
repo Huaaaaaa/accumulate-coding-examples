@@ -12,12 +12,12 @@ import java.util.stream.Stream;
  */
 public class SetAndGetField {
 
-    public static void main(String[] args) throws Exception {
+    /*public static void main(String[] args) throws Exception {
         PersonReflect personReflect = new PersonReflect();
         PersonAnnotation personAnnotation = new PersonAnnotation();
         setFieldByReflect(personReflect);
         setFieldByAnnotation(personAnnotation);
-    }
+    }*/
 
     /**
      * 通过发射的方式设置并获取属性

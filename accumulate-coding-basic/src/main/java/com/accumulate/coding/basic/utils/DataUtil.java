@@ -25,7 +25,4 @@ public class DataUtil {
         return resMap;
     }
 
-    public static void main(String[] args) {
-        toBinaryString(183);
-    }
 }
