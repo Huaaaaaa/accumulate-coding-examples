@@ -1,6 +1,7 @@
 package com.accumuate.coding.leetcode.basic;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Vector;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -16,7 +17,9 @@ public class Fibonacci {
 
     public static void main(String[] args) {
         int n = 40;
-        System.out.println("开始使用暴力法.......");
+        int fib = new Fibonacci().fib(100);
+        System.out.println(fib);
+       /* System.out.println("开始使用暴力法.......");
         long forceStart = System.currentTimeMillis();
         int forceResult = forceCalculate(n);
         long forceEnd = System.currentTimeMillis();
@@ -27,7 +30,7 @@ public class Fibonacci {
         int mementoResult = mementoCalculate(n);
         long mementoEnd = System.currentTimeMillis();
         System.out.println("使用备忘录法计算f(" + n + ")的计算结果为:" + mementoResult);
-        System.out.println("使用备忘录法总共计算了:" + mementoTotalCount.intValue() + "次:+使用了" + (mementoEnd - mementoStart) + "毫秒");
+        System.out.println("使用备忘录法总共计算了:" + mementoTotalCount.intValue() + "次:+使用了" + (mementoEnd - mementoStart) + "毫秒");毫秒*/
     }
 
     /**
@@ -73,4 +76,20 @@ public class Fibonacci {
         Integer mementoN = fromMemento(memento, n - 1) + fromMemento(memento, n - 2);
         return mementoN;
     }
+
+    Map<String,Integer> exist = new HashMap<String,Integer>();
+    public int fib(int n) {
+        String key = String.valueOf(n);
+        if(n==0){
+            return 0;
+        };
+        if(n==1 || n==2) return 1;
+        if(exist.get(key)!=null){
+            return exist.get(key);
+        }
+        int sum = (fib(n-1)+fib(n-2))%1000000007;
+        exist.put(key,sum);
+        return sum;
+    }
+
 }

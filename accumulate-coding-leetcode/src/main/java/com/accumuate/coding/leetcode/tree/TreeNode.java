@@ -31,5 +31,9 @@ public class TreeNode implements Serializable {
      */
     private TreeNode rightChild;
 
+    public TreeNode(int data) {
+        this.data = data;
+    }
+
 
 }
