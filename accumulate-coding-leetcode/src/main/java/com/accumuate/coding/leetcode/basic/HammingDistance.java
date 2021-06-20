@@ -1,7 +1,7 @@
 package com.accumuate.coding.leetcode.basic;
 
 /**
- * @Author: huayingcao2
+ * @Author: huahaha
  * @DateTime: 2021/5/27  12:57
  * @Description: 汉明距离： 两个整数之间的汉明距离指的是这两个数字对应二进制位不同的位置的数目。
  */

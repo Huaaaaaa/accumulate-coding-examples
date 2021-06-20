@@ -1,7 +1,7 @@
 package com.accumuate.coding.leetcode.labuladong;
 
 /**
- * @Author: huayingcao2
+ * @Author: huahaha
  * @DateTime: 2021/6/16  12:57
  * @Description: 最长重复子串：
  * 给出一个字符串 S，考虑其所有重复子串（S 的连续子串，出现两次或多次，可能会有重叠）。
