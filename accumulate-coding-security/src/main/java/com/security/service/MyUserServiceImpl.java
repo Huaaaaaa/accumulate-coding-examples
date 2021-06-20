@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
  * @createTime: 2021/6/12
  * @description:
  */
-@Service
+@Service("myUserServiceImpl")
 public class MyUserServiceImpl implements UserDetailsService {
 
     @Autowired

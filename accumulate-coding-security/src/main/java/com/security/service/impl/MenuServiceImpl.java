@@ -1,6 +1,6 @@
 package com.security.service.impl;
 
-import comaccumulate.security.service.MenuService;
+import com.security.service.MenuService;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

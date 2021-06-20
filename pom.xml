@@ -24,7 +24,7 @@
         <module>accumulate-coding-basic</module>
         <module>accumulate-coding-design</module>
         <module>accumulate-coding-oauth2</module>
-        <module>accumulate-coding-security</module>
+        <!--<module>accumulate-coding-security</module>-->
     </modules>
 
     <properties>
