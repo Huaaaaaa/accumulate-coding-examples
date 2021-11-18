@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.hyc.endeavor</groupId>
         <artifactId>accumulate-coding</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
     <artifactId>accumulate-coding-design</artifactId>
     <properties>
@@ -37,13 +37,13 @@
         <dependency>
             <groupId>com.hyc.endeavor</groupId>
             <artifactId>accumulate-coding-common</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
             <groupId>com.hyc.endeavor</groupId>
             <artifactId>accumulate-coding-middle</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/asm/asm -->
@@ -71,15 +71,10 @@
 
 
         <!-- https://mvnrepository.com/artifact/cglib/cglib -->
-        <!--<dependency>
+        <dependency>
             <groupId>cglib</groupId>
             <artifactId>cglib</artifactId>
             <version>3.3.0</version>
-        </dependency>-->
-        <dependency>
-            <groupId>com.hyc.endeavor</groupId>
-            <artifactId>accumulate-coding-middle</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/jep/jep -->
         <!-- <dependency>
