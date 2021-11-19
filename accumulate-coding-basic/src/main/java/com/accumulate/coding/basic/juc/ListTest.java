@@ -2,10 +2,7 @@ package com.accumulate.coding.basic.juc;
 
 import net.bytebuddy.dynamic.scaffold.MethodGraph;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Vector;
+import java.util.*;
 
 /**
  * @author: cyhua
@@ -28,6 +25,7 @@ public class ListTest {
         String s = arrayList.get(0);
         System.out.println(arrayList.size());
         System.out.println(s);
+        List<String> strings = Collections.synchronizedList(arrayList);
     }
 
     public void testLinkedList() {

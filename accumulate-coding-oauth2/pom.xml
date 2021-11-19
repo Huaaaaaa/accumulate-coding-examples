@@ -7,7 +7,6 @@
         <artifactId>accumulate-coding</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <version>0.0.1-SNAPSHOT</version>
     <artifactId>accumulate-coding-oauth2</artifactId>
     <name>accumulate-coding-oauth2</name>
     <properties>

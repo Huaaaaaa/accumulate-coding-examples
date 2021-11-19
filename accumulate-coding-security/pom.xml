@@ -58,15 +58,6 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
-   <!-- <build>
-=======
-        <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
@@ -85,14 +76,13 @@
         </dependency>
     </dependencies>
 
-    <build>
->>>>>>> f16d660b71ef2aab21df2a8de9f93fda3c3478e3
+
+   <!-- <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-<<<<<<< HEAD
     </build>-->
 </project>

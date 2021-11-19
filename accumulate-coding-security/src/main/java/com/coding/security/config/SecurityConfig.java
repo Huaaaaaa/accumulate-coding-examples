@@ -1,7 +1,5 @@
 package com.coding.security.config;
 
-import comaccumulate.security.handler.MyAccessDeniedHandler;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -18,10 +16,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    private MyAccessDeniedHandler myAccessDeniedHandler;
+    //private MyAccessDeniedHandler myAccessDeniedHandler;
+
     /**
      * 自定义登录页面的配置
+     *
      * @param httpSecurity
      * @throws Exception
      */
@@ -40,18 +39,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                .successHandler(new MyAuthSuccessHandler("/toIndex"))
                 //登录失败后的跳转逻辑
                 .failureForwardUrl("/toError");
-                //登录失败后的跳转逻辑-自定义登录失败处理器handler
+        //登录失败后的跳转逻辑-自定义登录失败处理器handler
 //                .failureHandler(new MyAuthFailureHandler("/toError"));
         //授权
         httpSecurity.authorizeRequests()
                 //放行错误页，不需要认证
                 .antMatchers("/error.html").permitAll()
                 //放行静态资源
-                .antMatchers("/css/**","/js/**","/images/**","/html/**").permitAll()
+                .antMatchers("/css/**", "/js/**", "/images/**", "/html/**").permitAll()
                 //正则匹配
                 .regexMatchers("/health").permitAll()
                 //正则匹配同时指定请求方式
-                .regexMatchers(HttpMethod.POST,"/health").permitAll()
+                .regexMatchers(HttpMethod.POST, "/health").permitAll()
                 .mvcMatchers("/health").servletPath("").permitAll()
                 //放行登录页，不需要认证
                 .antMatchers("/login.html").permitAll()
@@ -73,8 +72,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity.csrf().disable();
 
         //异常处理
-        httpSecurity.exceptionHandling().accessDeniedHandler(myAccessDeniedHandler);
+        //httpSecurity.exceptionHandling().accessDeniedHandler(myAccessDeniedHandler);
     }
+
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
