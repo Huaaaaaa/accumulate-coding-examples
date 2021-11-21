@@ -16,15 +16,10 @@
 
     <modules>
         <module>accumulate-coding-leetcode</module>
-        <module>accumulate-coding-reactor</module>
-        <module>accumulate-coding-tool</module>
         <module>accumulate-coding-common</module>
-        <module>accumulate-coding-middle</module>
         <module>accumulate-coding-web</module>
         <module>accumulate-coding-basic</module>
         <module>accumulate-coding-design</module>
-        <module>accumulate-coding-security</module>
-        <module>accumulate-coding-oauth2</module>
     </modules>
 
     <properties>

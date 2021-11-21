@@ -50,9 +50,8 @@ mybatis-plus:
       show-sql: true
 accumulate:
   coding:
-    tool:
       log:
-        path: ../log
+        path: /tmp/accumulate
         level: INFO
 server:
   servlet:

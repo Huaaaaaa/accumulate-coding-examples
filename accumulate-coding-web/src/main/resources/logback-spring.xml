@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="false">
 
-    <springProperty scope="context" name="LOG_HOME" source="accumulate.coding.web.log.path"/>
-    <springProperty scope="context" name="LOG_LEVEL" source="accumulate.coding.web.log.level"/>
+    <springProperty scope="context" name="LOG_HOME" source="accumulate.coding.log.path"/>
+    <springProperty scope="context" name="LOG_LEVEL" source="accumulate.coding.log.level"/>
 
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
 
@@ -12,9 +12,9 @@
     </appender>
 
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOG_HOME}/tool.log</file>
+        <file>${LOG_HOME}/accumulate.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <FileNamePattern>${LOG_HOME}/tool-%d{yyyy-MM-dd}-%i.log</FileNamePattern>
+            <FileNamePattern>${LOG_HOME}/accumulate-%d{yyyy-MM-dd}-%i.log</FileNamePattern>
             <maxFileSize>1024MB</maxFileSize>
             <MaxHistory>30</MaxHistory>
         </rollingPolicy>
