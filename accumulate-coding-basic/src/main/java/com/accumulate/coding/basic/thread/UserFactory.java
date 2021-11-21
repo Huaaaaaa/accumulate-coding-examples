@@ -3,7 +3,7 @@ package com.accumulate.coding.basic.thread;
 import com.accumulate.coding.basic.common.User;
 
 /**
- * @author: cyhua
+ * @author: Huaaaaaa
  * @createTime: 2021/11/18
  * @description: 单例模式
  */

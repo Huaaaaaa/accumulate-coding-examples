@@ -6,7 +6,7 @@ import java.util.Vector;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @author: cyhua
+ * @author: Huaaaaaa
  * @createTime: 2021/4/25
  * @description: 斐波那契数列
  */

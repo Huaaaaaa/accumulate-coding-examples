@@ -13,7 +13,7 @@ import org.springframework.security.web.authentication.rememberme.JdbcTokenRepos
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 
 /**
- * @author: cyhua
+ * @author: Huaaaaaa
  * @createTime: 2021/6/12
  * @description:
  */

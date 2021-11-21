@@ -1,7 +1,7 @@
 package com.accumulate.coding.basic.thread;
 
 /**
- * @author: cyhua
+ * @author: Huaaaaaa
  * @createTime: 2021/11/12
  * @description:
  */

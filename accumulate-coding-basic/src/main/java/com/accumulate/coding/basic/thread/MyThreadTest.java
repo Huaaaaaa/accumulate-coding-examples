@@ -3,7 +3,7 @@ package com.accumulate.coding.basic.thread;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * @author: cyhua
+ * @author: Huaaaaaa
  * @createTime: 2021/11/12
  * @description:
  */

@@ -3,7 +3,7 @@ package com.accumuate.coding.leetcode.labuladong;
 import java.util.HashMap;
 
 /**
- * @author: cyhua
+ * @author: Huaaaaaa
  * @createTime: 2021/6/12
  * @description: length of longest sub string:无重复字符的最长子串
  */

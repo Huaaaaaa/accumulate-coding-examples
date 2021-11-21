@@ -3,7 +3,7 @@ package com.accumulate.coding.basic.juc;
 import java.util.*;
 
 /**
- * @author: cyhua
+ * @author: Huaaaaaa
  * @createTime: 2021/11/16
  * @description:
  */

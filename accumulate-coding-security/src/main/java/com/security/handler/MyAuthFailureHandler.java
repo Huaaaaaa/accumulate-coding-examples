@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * @author: cyhua
+ * @author: Huaaaaaa
  * @createTime: 2021/6/19
  * @description: 自定义授权失败之后的跳转页，前后端分离时使用，如跳转至error.html
  */
