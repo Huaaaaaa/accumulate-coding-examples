@@ -1,7 +1,5 @@
 package com.design.pattern.behavioral.observer.jdk;
 
-import javafx.beans.value.ObservableValueBase;
-
 import java.util.Observable;
 
 /**

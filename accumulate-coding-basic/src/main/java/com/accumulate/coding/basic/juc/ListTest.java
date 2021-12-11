@@ -48,4 +48,10 @@ public class ListTest {
         System.out.println(vector);
     }
 
+
+    public void testArray() {
+        String[] strings = {"hello"};
+        strings[1] = "jjj";
+        System.out.println(strings);
+    }
 }
