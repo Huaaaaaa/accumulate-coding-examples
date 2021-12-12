@@ -1,8 +1,7 @@
 package com.accumuate.coding.leetcode.sort;
 
-import org.springframework.util.CollectionUtils;
-
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @author: cyhua
@@ -24,8 +23,12 @@ public class QuickSort {
         for (int i = 0; i < length; i++) {
             number[i] = Integer.parseInt(srcString[i]);
         }
-        quickSort(number, 0, length - 1);
-        System.out.println("data:" + CollectionUtils.arrayToList(number));
+        //System.out.println("pre:" + getPre(number, 2));
+
+
+        int[] ints = quickSort(number, 0, length - 1);
+        ArrayList<Integer> collect = (ArrayList<Integer>) Arrays.stream(ints).boxed().collect(Collectors.toList());
+        System.out.println(collect.subList(0, 3));
     }
 
     public static int[] quickSort(int[] data, int low, int high) {
@@ -58,5 +61,11 @@ public class QuickSort {
         data[low] = tmp;
         //基准值即为low的指针
         return low;
+    }
+
+    public static List<Integer> getPre(int[] data, int k) {
+        Arrays.sort(data);
+        List<Integer> collect = Arrays.stream(data).boxed().collect(Collectors.toList());
+        return collect.subList(0, k);
     }
 }

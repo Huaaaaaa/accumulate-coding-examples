@@ -18,7 +18,9 @@ public class Fibonacci {
     public static void main(String[] args) {
         int n = 40;
         int fib = new Fibonacci().fib(100);
-        System.out.println(fib);
+        System.out.println("fib="+fib);
+        int dp = dp(100);
+        System.out.println("dp="+dp);
        /* System.out.println("开始使用暴力法.......");
         long forceStart = System.currentTimeMillis();
         int forceResult = forceCalculate(n);
@@ -90,6 +92,20 @@ public class Fibonacci {
         int sum = (fib(n-1)+fib(n-2))%1000000007;
         exist.put(key,sum);
         return sum;
+    }
+
+
+    public static int dp(int n){
+        if(n<=1){
+            return 1;
+        }
+        int[] dp = new int[n+1];
+        dp[1]=1;
+        dp[2]=2;
+        for (int i = 3; i <= n; i++) {
+            dp[i]=dp[i-1]+dp[i-2];
+        }
+        return dp[n];
     }
 
 }

@@ -1,9 +1,11 @@
 package com.accumuate.coding.leetcode.basic;
 
+import apple.laf.JRSUIUtils;
 import com.accumuate.coding.leetcode.BaseArray;
 import com.accumuate.coding.leetcode.tree.TreeNode;
 import org.springframework.util.CollectionUtils;
 
+import java.util.Arrays;
 import java.util.Vector;
 
 /**
@@ -13,27 +15,35 @@ import java.util.Vector;
  */
 public class BinaryTreeThreeOrder extends BaseArray {
 
-    private Vector<Integer> preList = new Vector<Integer>();
-    private Vector<Integer> middleList = new Vector<Integer>();
-    private Vector<Integer> postList = new Vector<Integer>();
+    private int[] preList;
+    private int[] middleList;
+    private int[] postList;
 
     public static void main(String[] args) {
         TreeNode treeNode = getTreeNode();
         BinaryTreeThreeOrder binaryTreeThreeOrder = new BinaryTreeThreeOrder();
-        Vector<Vector<Integer>> res = binaryTreeThreeOrder.threeOrders(treeNode);
-        System.out.println(res);
+        int[][] res = binaryTreeThreeOrder.threeOrders(treeNode);
+        Arrays.stream(res).forEach(s-> Arrays.stream(s).forEach(value -> System.out.println(value)));
 
     }
 
-    public Vector<Vector<Integer>> threeOrders(TreeNode root) {
+    public int size(TreeNode treeNode) {
+        if (treeNode == null) {
+            return 0;
+        } else {
+            return 1 + size(treeNode.getLeftChild()) + size(treeNode.getRightChild());
+        }
+    }
+
+    public int[][] threeOrders(TreeNode root) {
+        int size = size(root);
+        preList = new int[size];
+        middleList = new int[size];
+        postList = new int[size];
         preOrder(root);
         middleOrder(root);
         postOrder(root);
-        Vector<Vector<Integer>> res = new Vector();
-        res.add(preList);
-        res.add(middleList);
-        res.add(postList);
-        return res;
+        return new int[][]{preList, middleList, postList};
     }
 
     int pre, middle, post = 0;
@@ -42,7 +52,7 @@ public class BinaryTreeThreeOrder extends BaseArray {
         if (root == null) {
             return;
         }
-        preList.add(root.getData());
+        preList[pre++] = root.getData();
         preOrder(root.getLeftChild());
         preOrder(root.getRightChild());
     }
@@ -52,7 +62,7 @@ public class BinaryTreeThreeOrder extends BaseArray {
             return;
         }
         middleOrder(root.getLeftChild());
-        middleList.add(root.getData());
+        middleList[middle++] = root.getData();
         middleOrder(root.getRightChild());
     }
 
@@ -63,6 +73,6 @@ public class BinaryTreeThreeOrder extends BaseArray {
 
         postOrder(root.getLeftChild());
         postOrder(root.getRightChild());
-        postList.add(root.getData());
+        postList[post++] = root.getData();
     }
 }
