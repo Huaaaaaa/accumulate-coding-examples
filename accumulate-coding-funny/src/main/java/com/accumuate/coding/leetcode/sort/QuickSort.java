@@ -23,8 +23,9 @@ public class QuickSort {
         for (int i = 0; i < length; i++) {
             number[i] = Integer.parseInt(srcString[i]);
         }
-        //System.out.println("pre:" + getPre(number, 2));
 
+        //System.out.println("pre:" + getPre(number, 2));
+        Arrays.sort(number);
 
         int[] ints = quickSort(number, 0, length - 1);
         ArrayList<Integer> collect = (ArrayList<Integer>) Arrays.stream(ints).boxed().collect(Collectors.toList());

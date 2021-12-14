@@ -1,12 +1,9 @@
 package com.accumuate.coding.leetcode.basic;
 
-import apple.laf.JRSUIUtils;
 import com.accumuate.coding.leetcode.BaseArray;
 import com.accumuate.coding.leetcode.tree.TreeNode;
-import org.springframework.util.CollectionUtils;
 
 import java.util.Arrays;
-import java.util.Vector;
 
 /**
  * @author: huayingcao

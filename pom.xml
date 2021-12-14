@@ -15,7 +15,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>accumulate-coding-leetcode</module>
+        <module>accumulate-coding-funny</module>
         <module>accumulate-coding-common</module>
         <module>accumulate-coding-web</module>
         <module>accumulate-coding-basic</module>
