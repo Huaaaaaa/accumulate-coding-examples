@@ -9,6 +9,6 @@ public class BaseSort {
 
 
     protected static Integer[] data() {
-        return new Integer[]{3, 5, 10, 23, 5, 8, 1};
+        return new Integer[]{3, 5, 10, 23, 5, 8, 1,1,6,7};
     }
 }

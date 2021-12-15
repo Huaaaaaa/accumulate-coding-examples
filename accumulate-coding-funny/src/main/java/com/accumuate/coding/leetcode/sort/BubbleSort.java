@@ -19,8 +19,8 @@ public class BubbleSort extends BaseSort {
 
     public static void bubbleSort(Integer[] data) {
         System.out.println("before sorting:data=" + Arrays.asList(data));
-        for (int i = 0; i < data.length; i++) {
-            for (int j = data.length-1; j >0; j--) {
+        for (int i = 0; i < data.length-1; i++) {
+            for (int j = data.length-1; j >i; j--) {
                 if (data[j] < data[j-1]) {
                     int tmp = data[j];
                     data[j] = data[j-1];
