@@ -60,10 +60,61 @@ public class BaseArray {
     public static TreeNode getTreeNode() {
         int[] array = getArray();
         TreeNode root = new TreeNode(array[0]);
-        TreeNode left = new TreeNode(array[1]);
-        TreeNode right = new TreeNode(array[2]);
-        root.setLeftChild(left);
-        root.setRightChild(right);
+        for (int i = 1; i < array.length; i++) {
+            TreeNode node = new TreeNode(array[i]);
+            insertTree(root, node);
+        }
+        System.out.println(root);
         return root;
+    }
+
+    public static void insertTree(TreeNode root, TreeNode newNode) {
+        if (root.val < newNode.val) {
+            if (root.right != null) {
+                insertTree(root.right, newNode);
+            } else {
+                root.right = newNode;
+            }
+        } else if (root.val > newNode.val) {
+            if (root.left != null) {
+                insertTree(root.left, newNode);
+            } else {
+                root.left = newNode;
+            }
+        }
+    }
+
+    public static class TreeNode {
+        int val = 0;
+        TreeNode left = null;
+        TreeNode right = null;
+
+        public TreeNode(int val) {
+            this.val = val;
+        }
+
+        public int getVal() {
+            return val;
+        }
+
+        public void setVal(int val) {
+            this.val = val;
+        }
+
+        public TreeNode getLeft() {
+            return left;
+        }
+
+        public void setLeft(TreeNode left) {
+            this.left = left;
+        }
+
+        public TreeNode getRight() {
+            return right;
+        }
+
+        public void setRight(TreeNode right) {
+            this.right = right;
+        }
     }
 }

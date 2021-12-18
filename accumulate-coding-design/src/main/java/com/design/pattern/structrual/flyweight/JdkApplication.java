@@ -48,5 +48,7 @@ public class JdkApplication {
         System.out.println(b111 == b1111);//true
         System.out.println(c111 == c1111);//false 使用IntegerValue方法时使用了享元模式，所以-128~127之间的数字是指向同一块内存空间
 
+
+
     }
 }

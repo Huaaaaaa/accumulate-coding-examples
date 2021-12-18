@@ -1,7 +1,6 @@
 package com.accumuate.coding.leetcode.basic;
 
 import com.accumuate.coding.leetcode.BaseArray;
-import com.accumuate.coding.leetcode.tree.TreeNode;
 
 import java.util.Arrays;
 
@@ -17,10 +16,10 @@ public class BinaryTreeThreeOrder extends BaseArray {
     private int[] postList;
 
     public static void main(String[] args) {
-        TreeNode treeNode = getTreeNode();
+        BaseArray.TreeNode treeNode = getTreeNode();
         BinaryTreeThreeOrder binaryTreeThreeOrder = new BinaryTreeThreeOrder();
         int[][] res = binaryTreeThreeOrder.threeOrders(treeNode);
-        Arrays.stream(res).forEach(s-> Arrays.stream(s).forEach(value -> System.out.println(value)));
+        Arrays.stream(res).forEach(s -> Arrays.stream(s).forEach(value -> System.out.println(value)));
 
     }
 
@@ -28,7 +27,7 @@ public class BinaryTreeThreeOrder extends BaseArray {
         if (treeNode == null) {
             return 0;
         } else {
-            return 1 + size(treeNode.getLeftChild()) + size(treeNode.getRightChild());
+            return 1 + size(treeNode.getLeft()) + size(treeNode.getRight());
         }
     }
 
@@ -49,18 +48,18 @@ public class BinaryTreeThreeOrder extends BaseArray {
         if (root == null) {
             return;
         }
-        preList[pre++] = root.getData();
-        preOrder(root.getLeftChild());
-        preOrder(root.getRightChild());
+        preList[pre++] = root.getVal();
+        preOrder(root.getLeft());
+        preOrder(root.getRight());
     }
 
     public void middleOrder(TreeNode root) {
         if (root == null) {
             return;
         }
-        middleOrder(root.getLeftChild());
-        middleList[middle++] = root.getData();
-        middleOrder(root.getRightChild());
+        middleOrder(root.getLeft());
+        middleList[middle++] = root.getVal();
+        middleOrder(root.getRight());
     }
 
     public void postOrder(TreeNode root) {
@@ -68,8 +67,8 @@ public class BinaryTreeThreeOrder extends BaseArray {
             return;
         }
 
-        postOrder(root.getLeftChild());
-        postOrder(root.getRightChild());
-        postList[post++] = root.getData();
+        postOrder(root.getLeft());
+        postOrder(root.getRight());
+        postList[post++] = root.getVal();
     }
 }
