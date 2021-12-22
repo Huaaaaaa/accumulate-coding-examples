@@ -17,9 +17,9 @@ public class StringNumberTransfer {
         Scanner scanner = new Scanner(System.in);
         String s = scanner.nextLine();
         String result = transfer(s);
-        String result2 = transferWithLib(s);
+        //String result2 = transferWithLib(s);
         System.out.println("result=" + result);
-        System.out.println("result2=" + result2);
+        //System.out.println("result2=" + result2);
     }
 
     /**
@@ -82,16 +82,25 @@ public class StringNumberTransfer {
         }
         StringBuilder sb = new StringBuilder();
         int count = 0;
-        int begin = 0, end = firstIndex;
+        int begin = 0;
 
-        while (count <= numberOfSplit && end < dotLeft.length()) {
+        for (int i = firstIndex; i <= dotLeft.length(); i = i + 3) {
+            if (i == dotLeft.length()) {
+                sb.append(dotLeft.substring(begin, i));
+            } else {
+                sb.append(dotLeft.substring(begin, i)).append(",");
+            }
+            begin = i;
+        }
+
+        /*while (count <= numberOfSplit && end < dotLeft.length()) {
             if (count != 0) {
                 end = firstIndex + 3;
             }
             sb.append(dotLeft.substring(begin, end)).append(",");
             begin = end;
             count++;
-        }
+        }*/
         String s = sb.toString();
         if (s.endsWith(",")) {
             s = s.substring(0, s.length() - 1);
