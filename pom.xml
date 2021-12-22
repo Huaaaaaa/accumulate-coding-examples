@@ -21,6 +21,7 @@
         <module>accumulate-coding-basic</module>
         <module>accumulate-coding-design</module>
         <module>accumulate-coding-interview</module>
+        <module>accumulate-coding-middle</module>
     </modules>
 
     <properties>
