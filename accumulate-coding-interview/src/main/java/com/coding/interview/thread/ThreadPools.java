@@ -1,7 +1,5 @@
 package com.coding.interview.thread;
 
-import com.sun.xml.internal.rngom.digested.DUnaryPattern;
-
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.concurrent.ExecutorService;

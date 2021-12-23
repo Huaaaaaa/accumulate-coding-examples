@@ -24,6 +24,12 @@
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.hyc.endeavor</groupId>
+            <artifactId>accumulate-coding-io</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 
    <!-- <build>

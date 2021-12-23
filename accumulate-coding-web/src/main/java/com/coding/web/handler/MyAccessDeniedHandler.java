@@ -1,4 +1,4 @@
-package com.accumulate.web.handler;
+package com.coding.web.handler;
 
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;

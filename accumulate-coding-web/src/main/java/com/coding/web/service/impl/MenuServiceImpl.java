@@ -1,6 +1,6 @@
-package com.accumulate.web.service.impl;
+package com.coding.web.service.impl;
 
-import com.accumulate.web.service.MenuService;
+import com.coding.web.service.MenuService;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

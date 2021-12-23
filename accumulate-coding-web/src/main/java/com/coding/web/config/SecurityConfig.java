@@ -1,4 +1,4 @@
-package com.accumulate.web.config;
+package com.coding.web.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

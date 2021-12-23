@@ -1,4 +1,4 @@
-package com.accumulate.web.service;
+package com.coding.web.service;
 
 import org.springframework.security.core.Authentication;
 

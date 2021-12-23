@@ -46,7 +46,7 @@
     <logger name="org.springframework" level="${LOG_LEVEL}"></logger>
 
     <root level="${LOG_LEVEL}">
-        <appender-ref ref="ASYNC-FILE"/>
+        <!--<appender-ref ref="ASYNC-FILE"/>-->
         <appender-ref ref="ASYNC-CONSOLE"/>
     </root>
 </configuration>

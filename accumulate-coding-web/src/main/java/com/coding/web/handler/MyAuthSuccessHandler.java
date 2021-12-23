@@ -1,4 +1,4 @@
-package com.accumulate.web.handler;
+package com.coding.web.handler;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.User;

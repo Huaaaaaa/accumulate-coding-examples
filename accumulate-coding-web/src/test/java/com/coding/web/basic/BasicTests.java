@@ -1,10 +1,10 @@
-package com.accumulate.web;
+package com.coding.web.basic;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AccumulateCodingWebApplicationTests {
+class BasicTests {
 
 //	@Test
 	void contextLoads() {

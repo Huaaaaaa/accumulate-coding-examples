@@ -1,4 +1,4 @@
-package com.accumulate.web.controller;
+package com.coding.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
