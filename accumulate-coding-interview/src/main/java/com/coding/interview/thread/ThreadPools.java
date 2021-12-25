@@ -2,10 +2,8 @@ package com.coding.interview.thread;
 
 import java.text.DateFormat;
 import java.util.Date;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
+import java.util.Random;
+import java.util.concurrent.*;
 
 /**
  * @author: me
@@ -18,8 +16,9 @@ public class ThreadPools {
     public static void main(String[] args) {
         /*fixedPool();
         cachedPool();
-        scheduledPool();*/
-        newSinglePool();
+        scheduledPool();
+        newSinglePool();*/
+        customPool();
     }
 
     /**
@@ -117,6 +116,44 @@ public class ThreadPools {
             executorService.execute(() -> System.out.println("线程 " + Thread.currentThread().getName() + " 执行任务 task" + finalI));
         }
         executorService.shutdown();
+    }
+
+
+    public static void customPool() {
+        CountDownLatch start = new CountDownLatch(1);
+        CountDownLatch end = new CountDownLatch(20);
+        /*
+         * 20个并发，通过线程池执行过程如下：
+         * 1、先让2个核心线程执行2个任务
+         * 2、接下来的8个任务进入阻塞队列，等待执行
+         * 3、再创建8个线程（10-2=8）执行8个任务
+         * 4、还有2（20-2-8-8）个线程开启拒绝策略
+         */
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 5, 30000, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>(5));
+        //允许回收核心线程
+        executor.allowCoreThreadTimeOut(true);
+        //提前创建核心线程
+        boolean b = executor.prestartCoreThread();
+        try {
+            for (int i = 0; i < 3; i++) {
+                int finalI = i;
+                executor.execute(() -> {
+                    System.out.println("自定义线程池开始工作,当前线程：" + Thread.currentThread().getName() + "正在执行任务：" + finalI);
+                    try {
+                        start.await();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    } finally {
+                        end.countDown();
+                    }
+                });
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            start.countDown();
+            executor.shutdown();
+        }
     }
 
 
