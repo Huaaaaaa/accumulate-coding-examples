@@ -8,8 +8,35 @@ package com.accumuate.coding.leetcode.string;
 public class MaxSubHuiWen {
 
     public static void main(String[] args) {
-        int res = getLongestPalindrome("abacdd");
+        String res = longestSubStr("abacdd");
         System.out.println(res);
+    }
+
+
+    public static String longestSubStr(String s) {
+        if ("".equals(s) || s.length() < 1) {
+            return "";
+        }
+        int len = s.length();
+        int start = 0, end = 0;
+        for (int i = 0; i < len; i++) {
+            int len1 = checkSub(s, i, i);
+            int len2 = checkSub(s, i, i + 1);
+            int maxLen = Math.max(len1, len2);
+            if (maxLen > end - start) {
+                start = i - (maxLen - 1) / 2;
+                end = i + maxLen / 2;
+            }
+        }
+        return s.substring(start, end + 1);
+    }
+
+    public static int checkSub(String s, int left, int right) {
+        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+            --left;
+            ++right;
+        }
+        return right - left - 1;
     }
 
     public static int getLongestPalindrome(String A) {
