@@ -26,48 +26,58 @@ public class StringToInteger {
 
     public static void main(String[] args) {
         StringToInteger stringToInteger = new StringToInteger();
-        int res = stringToInteger.myAtoi("-2147483647");
+        //int res = stringToInteger.myAtoi("-2147483647");
+        // int res = stringToInteger.myAtoi("2147483646");
         //int res = stringToInteger.myAtoi("-91283472332");
+        int res = stringToInteger.myAtoi("21474836460");
         System.out.println(res);
     }
 
     public int myAtoi(String s) {
+        //1、先去掉头部空格：需要循环去
         while (s.startsWith(" ")) {
             s = s.substring(s.indexOf(" ") + 1);
         }
+        //2、如果去掉空格还为空串，则直接返回0
         if ("".equals(s)) {
             return 0;
         }
+        //3、分隔成字符数组并判断第一个字符是否为符号位，如果时符号位，有效为从下标1开始
         char[] chars = s.toCharArray();
         boolean isNegative = chars[0] == '-';
         int i = 0;
         if (chars[0] == '+' || chars[0] == '-') {
             i = 1;
         }
-        StringBuilder number = new StringBuilder();
-        for (; i < chars.length; i++) {
-            if ('0' <= chars[i] && chars[i] <= '9') {
-                number.append(chars[i]);
-            } else {
+        //4、遍历字符数组，遇到第一个非数字字符时直接截取该字符之前的
+        for (int j = i; j < chars.length; j++) {
+            if ('0' > chars[j] || chars[j] > '9') {
+                s = s.substring(i, j);
                 break;
             }
         }
 
-        String s1 = number.toString();
+        //5、初始化：结果data=0,符号位为-1或1
         int data = 0;
-        if (s1 != null && s1.length() > 0) {
-            int size = s1.length();
-            char[] chars1 = s1.toCharArray();
-            int pow = size;
+        int sign = isNegative ? -1 : 1;
+        if (s.length() > 0) {
+            int size = s.length();
+            char[] chars1 = s.toCharArray();
+            //6、开始遍历有效的字符串
             for (int j = 0; j < size; j++) {
-                int numericValue = isNegative ? -Character.getNumericValue(chars1[j]) : Character.getNumericValue(chars1[j]);
-                data += numericValue * Math.pow(10, pow);
-                if (isNegative && data <= Integer.MIN_VALUE) {
-                    return Integer.MIN_VALUE;
-                }
-                if (data - 1 >= Integer.MAX_VALUE) {
+                //6.1 取出当前字符
+                char currChar = chars1[j];
+                //6.2 判断当前结果是否超出整型最大值:当前值大于214748364，或等于214748364且当前的数字大于整型最大值除以10后的余数，即7
+                if (data > Integer.MAX_VALUE / 10 || (data == Integer.MAX_VALUE / 10 && (currChar - '0') > 7)) {
                     return Integer.MAX_VALUE;
                 }
+                //6.3 判断当前结果是否超出整型最小值：当前值小于-214748364，或等于-214748364且当前的数字小于整型最小值除以10后的余数，即-8
+                if (data < Integer.MIN_VALUE / 10 || (data == Integer.MIN_VALUE / 10 && (currChar - '0') < -8)) {
+                    return Integer.MIN_VALUE;
+                }
+
+                //6.4 当前值不越界的情况下，计算新值：旧值*10+符号位*（当前字符-0）
+                data = data * 10 + sign * (currChar - '0');
             }
         }
 
