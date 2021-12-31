@@ -14,10 +14,10 @@ public class ThreadPools {
 
 
     public static void main(String[] args) {
-        /*fixedPool();
-        cachedPool();
-        scheduledPool();
-        newSinglePool();*/
+        //fixedPool();
+        //cachedPool();
+        //scheduledPool();
+        //newSinglePool();
         customPool();
     }
 
@@ -129,13 +129,13 @@ public class ThreadPools {
          * 3、再创建8个线程（10-2=8）执行8个任务
          * 4、还有2（20-2-8-8）个线程开启拒绝策略
          */
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 5, 30000, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>(5));
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 1, 0, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>(5));
         //允许回收核心线程
-        executor.allowCoreThreadTimeOut(true);
+        executor.allowCoreThreadTimeOut(false);
         //提前创建核心线程
         boolean b = executor.prestartCoreThread();
         try {
-            for (int i = 0; i < 3; i++) {
+            for (int i = 1; i <=6; i++) {
                 int finalI = i;
                 executor.execute(() -> {
                     System.out.println("自定义线程池开始工作,当前线程：" + Thread.currentThread().getName() + "正在执行任务：" + finalI);
