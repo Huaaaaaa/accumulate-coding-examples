@@ -125,17 +125,17 @@ public class ThreadPools {
         /*
          * 20个并发，通过线程池执行过程如下：
          * 1、先让2个核心线程执行2个任务
-         * 2、接下来的8个任务进入阻塞队列，等待执行
-         * 3、再创建8个线程（10-2=8）执行8个任务
-         * 4、还有2（20-2-8-8）个线程开启拒绝策略
+         * 2、接下来的9个任务进入阻塞队列，等待执行
+         * 3、再创建3个线程（5-2=3）执行8个任务
+         * 4、还有1（15-2-9-3）个线程开启拒绝策略
          */
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 1, 0, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>(5));
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(5, 5, 0, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>(10));
         //允许回收核心线程
         executor.allowCoreThreadTimeOut(false);
         //提前创建核心线程
         boolean b = executor.prestartCoreThread();
         try {
-            for (int i = 1; i <=6; i++) {
+            for (int i = 1; i <= 15; i++) {
                 int finalI = i;
                 executor.execute(() -> {
                     System.out.println("自定义线程池开始工作,当前线程：" + Thread.currentThread().getName() + "正在执行任务：" + finalI);

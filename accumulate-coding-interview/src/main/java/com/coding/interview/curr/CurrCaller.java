@@ -9,10 +9,21 @@ import java.util.concurrent.*;
  */
 public class CurrCaller {
 
-    private static ThreadPoolExecutor executor = new ThreadPoolExecutor(10, 10, 1000, TimeUnit.MILLISECONDS, new ArrayBlockingQueue<>(990), Executors.privilegedThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
+    private ThreadPoolExecutor executor = new ThreadPoolExecutor(5, 5, 1, TimeUnit.MILLISECONDS, new ArrayBlockingQueue<>(10), Executors.privilegedThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        int requestCount = 1000;
+        int index = 0;
+        CurrCaller currCaller = new CurrCaller();
+        currCaller.getUserById(++index);
+        currCaller.getUserById(++index);
+        currCaller.getUserById(++index);
+
+    }
+
+    public void getUserById(int counter) {
+        System.out.println("第" + counter + "次请求");
+        executor.allowCoreThreadTimeOut(true);
+        int requestCount = 10;
         UserFutureServiceImpl userFutureService = new UserFutureServiceImpl();
         CountDownLatch begin = new CountDownLatch(1);
         CountDownLatch end = new CountDownLatch(requestCount);
@@ -30,23 +41,12 @@ public class CurrCaller {
                         end.countDown();
                     }
                 });
-                /*submit = (Future<UserVo>) executor.submit(() -> {
-                    UserVo userVo = userFutureService.getUserBatchWithFuture(userId);
-                    System.out.println("第" + userId + "个用户=" + userVo);
-                    try {
-                        begin.await();
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    } finally {
-                        end.countDown();
-                    }
-                });*/
             }
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             begin.countDown();
-            executor.shutdown();
         }
     }
+
 }
