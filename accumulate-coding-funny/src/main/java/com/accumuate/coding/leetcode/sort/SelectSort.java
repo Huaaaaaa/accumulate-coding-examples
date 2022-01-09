@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @author: cyhua
  * @createTime: 2021/12/9
- * @description: 快速排序：先选出最大值或最小值，然后依此与其他的元素进行比较，并交换位置
+ * @description: 选择排序：先选出最大值或最小值，然后依此与其他的元素进行比较，并交换位置
  * 时间复杂度：O(n^2)
  * 空间复杂度：O(1)
  */

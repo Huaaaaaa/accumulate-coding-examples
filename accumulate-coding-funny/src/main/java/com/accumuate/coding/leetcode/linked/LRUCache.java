@@ -10,7 +10,7 @@ import java.util.LinkedHashMap;
  */
 public class LRUCache {
 
-    LinkedHashMap<Integer, Integer> cache = new LinkedHashMap<>();
+    static LinkedHashMap<Integer, Integer> cache = new LinkedHashMap<>();
     int cap;
 
     public static void main(String[] args) {
@@ -18,6 +18,9 @@ public class LRUCache {
         LRUCache lruCache = new LRUCache();
         int[] lru = lruCache.LRU(data, 3);
         Arrays.stream(lru).forEach(e-> System.out.println(e));
+        while (null!=cache.keySet().iterator().next()){
+            System.out.println(cache.get(cache.keySet().iterator().next()));
+        }
     }
 
     public int[] LRU(int[][] operators, int k) {
